@@ -1,0 +1,37 @@
+{
+  "name": "public-apis",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Simple web app for finding public APIs (data source: https://github.com/toddmotto/public-apis)",
+  "main": "index.js",
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "encoding": "^0.1.12",
+    "iconv-lite": "^0.4.15",
+    "is-stream": "^1.1.0",
+    "node-fetch": "^1.6.3",
+    "surge": "^0.19.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "elm-app build",
+    "deploy": "npm run build && cp CNAME dist/ && surge -p dist/",
+    "dev": "elm-app start",
+    "fetch:apis": "node ./scripts/fetchAPIs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfairbank/public-apis.git"
+  },
+  "author": "Jeremy Fairbank <elpapapollo@gmail.com> (http://jeremyfairbank.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jfairbank/public-apis/issues"
+  },
+  "homepage": "https://github.com/jfairbank/public-apis#readme"
+}
