@@ -84,7 +84,6 @@ function parse(contents) {
   }, {
     state: READY,
     tables: [],
-    currentCategory: null,
     currentTable: null,
   }).tables;
 }
