@@ -1,8 +1,8 @@
 module App exposing (..)
 
+import Util.Filter as Filter
 import Data.Api exposing (Api)
-import Data.Apis exposing (Apis, parseApis)
-import Dict exposing (Dict)
+import Data.Apis exposing (Apis, ApiFilters, parseApis)
 import Html exposing (..)
 import Html.Attributes exposing (class, href, value)
 import Html.Events exposing (onInput)
@@ -15,6 +15,7 @@ type alias Model =
 
 type Msg
     = SelectCategory String
+    | SelectAuth String
 
 
 init : Value -> ( Model, Cmd Msg )
@@ -22,16 +23,52 @@ init apis =
     ( parseApis apis, Cmd.none )
 
 
-updateCurrentCategoryName : String -> Apis -> Apis
-updateCurrentCategoryName categoryName apis =
-    { apis | currentCategoryName = categoryName }
+allLabel : String
+allLabel =
+    "All"
+
+
+setFilter :
+    (Api -> String)
+    -> (ApiFilters -> Maybe (Api -> Bool) -> ApiFilters)
+    -> String
+    -> Apis
+    -> Apis
+setFilter getField setter value ({ filters } as apis) =
+    let
+        updatedFilters =
+            if value == "" || value == allLabel then
+                setter filters Nothing
+            else
+                setter filters (Just (getField >> (==) value))
+    in
+        { apis | filters = updatedFilters }
+
+
+setCategoryFilter : String -> Apis -> Apis
+setCategoryFilter =
+    setFilter .category
+        (\filters value -> { filters | category = value })
+
+
+setAuthFilter : String -> Apis -> Apis
+setAuthFilter =
+    setFilter .auth
+        (\filters value -> { filters | auth = value })
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
-update (SelectCategory name) model =
-    ( Result.map (updateCurrentCategoryName name) model
-    , Cmd.none
-    )
+update msg model =
+    case msg of
+        SelectCategory name ->
+            ( Result.map (setCategoryFilter name) model
+            , Cmd.none
+            )
+
+        SelectAuth name ->
+            ( Result.map (setAuthFilter name) model
+            , Cmd.none
+            )
 
 
 categoryOption : String -> Html Msg
@@ -39,17 +76,33 @@ categoryOption name =
     option [ value name ] [ text name ]
 
 
-emptyOption : Html Msg
-emptyOption =
-    option [ value "" ] [ text "" ]
+allOption : Html Msg
+allOption =
+    option [ value "" ] [ text allLabel ]
 
 
 categoriesSelect : List String -> Html Msg
 categoriesSelect categories =
     div []
-        [ label [] [ text "Select API Category:" ]
+        [ label [] [ text "Filter by Category:" ]
         , select [ onInput SelectCategory ]
-            (emptyOption :: (List.map categoryOption categories))
+            (allOption :: (List.map categoryOption categories))
+        ]
+
+
+authSelect : Html Msg
+authSelect =
+    div []
+        [ label [] [ text "Filter by Auth:" ]
+        , select [ onInput SelectAuth ]
+            [ allOption
+            , option [ value "Yes" ] [ text "Yes" ]
+            , option [ value "No" ] [ text "No" ]
+            , option [ value "OAuth" ] [ text "OAuth" ]
+            , option [ value "apiKey" ] [ text "apiKey" ]
+            , option [ value "X-Mashape-Key" ] [ text "X-Mashape-Key" ]
+            , option [ value "token" ] [ text "token" ]
+            ]
         ]
 
 
@@ -66,7 +119,8 @@ tableCell value =
 apiRow : Api -> Html Msg
 apiRow api =
     tr []
-        [ tableCell api.name
+        [ tableCell api.category
+        , tableCell api.name
         , tableCell api.description
         , tableCell api.auth
         , tableCell api.https
@@ -85,39 +139,47 @@ tableBody f items =
     tbody [] (List.map f items)
 
 
-apiTable : List Api -> Html Msg
-apiTable entries =
+applyFilters : ApiFilters -> Api -> Bool
+applyFilters filters =
+    Filter.singleton
+        >> Filter.applyMaybe filters.category
+        >> Filter.applyMaybe filters.auth
+        >> Filter.extract
+
+
+filterEntries : Apis -> List Api
+filterEntries { filters, all } =
+    List.filter (applyFilters filters) all
+
+
+apiTable : Apis -> Html Msg
+apiTable apis =
     table [ class "table table-bordered" ]
         [ tableHeader
-            [ columnHeader "API"
+            [ columnHeader "Category"
+            , columnHeader "API"
             , columnHeader "Description"
             , columnHeader "Auth"
             , columnHeader "HTTPS"
             , columnHeader "Link"
             ]
-        , tableBody apiRow entries
+        , tableBody apiRow (filterEntries apis)
         ]
-
-
-selectedCategory : String -> Dict String (List Api) -> Html Msg
-selectedCategory name =
-    Dict.get name
-        >> Maybe.map apiTable
-        >> Maybe.withDefault (text "")
 
 
 view : Model -> Html Msg
 view model =
     case model of
-        Ok { categories, byCategory, currentCategoryName } ->
+        Ok apis ->
             div [ class "container" ]
                 [ div [ class "page-header" ]
                     [ h1 []
                         [ text "Public APIs"
                         ]
                     ]
-                , categoriesSelect categories
-                , selectedCategory currentCategoryName byCategory
+                , categoriesSelect apis.categories
+                , authSelect
+                , apiTable apis
                 ]
 
         Err _ ->

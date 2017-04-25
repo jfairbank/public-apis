@@ -6,6 +6,7 @@ import Json.Decode exposing (Decoder, string)
 
 type alias Api =
     { name : String
+    , category : String
     , description : String
     , auth : String
     , https : String
@@ -17,6 +18,7 @@ apiDecoder : Decoder Api
 apiDecoder =
     decode Api
         |> required "name" string
+        |> required "category" string
         |> required "description" string
         |> required "auth" string
         |> required "https" string

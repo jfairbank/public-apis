@@ -15,12 +15,13 @@ const promisify = fn => (...args) => new Promise((resolve, reject) => {
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
 
-function parseEntry(line) {
+function parseEntry(categoryName, line) {
   const linkRegex = /\((.+)\)/;
   const [, api, description, auth, https, link] = line.split('|');
 
   return {
     name: api.trim(),
+    category: categoryName,
     description: description.trim(),
     auth: auth.trim().replace(/`/g, ''),
     https: https.trim(),
@@ -72,7 +73,7 @@ function parse(contents) {
           tables.push(currentTable);
           currentTable = null;
         } else {
-          const entry = parseEntry(line);
+          const entry = parseEntry(currentTable.name, line);
           currentTable.entries.push(entry);
         }
 

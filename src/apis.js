@@ -4,6 +4,7 @@ module.exports = [
     "entries": [
       {
         "name": "IUCN",
+        "category": "Animals",
         "description": "IUCN Red List of Threatened Species",
         "auth": "token",
         "https": "No",
@@ -11,6 +12,7 @@ module.exports = [
       },
       {
         "name": "Petfinder",
+        "category": "Animals",
         "description": "Adoption",
         "auth": "Yes",
         "https": "Yes",
@@ -18,6 +20,7 @@ module.exports = [
       },
       {
         "name": "RescueGroups",
+        "category": "Animals",
         "description": "Adoption",
         "auth": "No",
         "https": "Yes",
@@ -30,6 +33,7 @@ module.exports = [
     "entries": [
       {
         "name": "AniList",
+        "category": "Anime",
         "description": "AniList Anime",
         "auth": "OAuth",
         "https": "No",
@@ -37,6 +41,7 @@ module.exports = [
       },
       {
         "name": "Kitsu",
+        "category": "Anime",
         "description": "Kitsu Anime",
         "auth": "OAuth",
         "https": "No",
@@ -44,6 +49,7 @@ module.exports = [
       },
       {
         "name": "Studio Ghibli",
+        "category": "Anime",
         "description": "Resources from Studio Ghibli films",
         "auth": "No",
         "https": "Yes",
@@ -56,6 +62,7 @@ module.exports = [
     "entries": [
       {
         "name": "Certly",
+        "category": "Anti-Malware",
         "description": "Certly Link/Domain Flagging",
         "auth": "token",
         "https": "Yes",
@@ -63,6 +70,7 @@ module.exports = [
       },
       {
         "name": "Google Safe Browsing",
+        "category": "Anti-Malware",
         "description": "Google Link/Domain Flagging",
         "auth": "token",
         "https": "Yes",
@@ -70,6 +78,7 @@ module.exports = [
       },
       {
         "name": "Metacert",
+        "category": "Anti-Malware",
         "description": "Metacert Link Flagging",
         "auth": "token",
         "https": "Yes",
@@ -77,6 +86,7 @@ module.exports = [
       },
       {
         "name": "VirusTotal",
+        "category": "Anti-Malware",
         "description": "VirusTotal File/URL Analysis",
         "auth": "token",
         "https": "Yes",
@@ -84,6 +94,7 @@ module.exports = [
       },
       {
         "name": "Web Of Trust (WOT)",
+        "category": "Anti-Malware",
         "description": "Website reputation",
         "auth": "apiKey",
         "https": "Yes",
@@ -96,6 +107,7 @@ module.exports = [
     "entries": [
       {
         "name": "Dribbble",
+        "category": "Art & Design",
         "description": "Design",
         "auth": "OAuth",
         "https": "No",
@@ -103,6 +115,7 @@ module.exports = [
       },
       {
         "name": "Noun Project",
+        "category": "Art & Design",
         "description": "Icons",
         "auth": "OAuth",
         "https": "No",
@@ -110,6 +123,7 @@ module.exports = [
       },
       {
         "name": "Icons8",
+        "category": "Art & Design",
         "description": "Icons",
         "auth": "OAuth",
         "https": "Yes",
@@ -117,6 +131,7 @@ module.exports = [
       },
       {
         "name": "Rijksmuseum",
+        "category": "Art & Design",
         "description": "Art",
         "auth": "No",
         "https": "Yes",
@@ -129,6 +144,7 @@ module.exports = [
     "entries": [
       {
         "name": "British National Bibliography",
+        "category": "Books",
         "description": "Books",
         "auth": "No",
         "https": "No",
@@ -136,6 +152,7 @@ module.exports = [
       },
       {
         "name": "Goodreads",
+        "category": "Books",
         "description": "Books",
         "auth": "No",
         "https": "Yes",
@@ -143,6 +160,7 @@ module.exports = [
       },
       {
         "name": "Google Books",
+        "category": "Books",
         "description": "Books",
         "auth": "OAuth",
         "https": "Yes",
@@ -155,6 +173,7 @@ module.exports = [
     "entries": [
       {
         "name": "mailgun",
+        "category": "Business",
         "description": "Email Service",
         "auth": "apiKey",
         "https": "Yes",
@@ -162,6 +181,7 @@ module.exports = [
       },
       {
         "name": "markerapi",
+        "category": "Business",
         "description": "Trademark Search",
         "auth": "No",
         "https": "No",
@@ -174,6 +194,7 @@ module.exports = [
     "entries": [
       {
         "name": "Church Calendar",
+        "category": "Calendar",
         "description": "Catholic liturgical calendar",
         "auth": "No",
         "https": "No",
@@ -181,6 +202,7 @@ module.exports = [
       },
       {
         "name": "Holidays",
+        "category": "Calendar",
         "description": "Free API for obtaining information about holidays.",
         "auth": "apiKey",
         "https": "Yes",
@@ -188,6 +210,7 @@ module.exports = [
       },
       {
         "name": "LectServe",
+        "category": "Calendar",
         "description": "Protestant liturgical calendar",
         "auth": "No",
         "https": "No",
@@ -195,6 +218,7 @@ module.exports = [
       },
       {
         "name": "Non-Working Days",
+        "category": "Calendar",
         "description": "Database of ICS files for non working days",
         "auth": "No",
         "https": "Yes",
@@ -207,6 +231,7 @@ module.exports = [
     "entries": [
       {
         "name": "Box",
+        "category": "Cloud Storage & File Sharing",
         "description": "File Sharing and Storage",
         "auth": "OAuth",
         "https": "Yes",
@@ -214,6 +239,7 @@ module.exports = [
       },
       {
         "name": "Dropbox",
+        "category": "Cloud Storage & File Sharing",
         "description": "File Sharing and Storage",
         "auth": "OAuth",
         "https": "Yes",
@@ -221,6 +247,7 @@ module.exports = [
       },
       {
         "name": "Google Drive",
+        "category": "Cloud Storage & File Sharing",
         "description": "File Sharing and Storage",
         "auth": "OAuth",
         "https": "Yes",
@@ -228,6 +255,7 @@ module.exports = [
       },
       {
         "name": "OneDrive",
+        "category": "Cloud Storage & File Sharing",
         "description": "File Sharing and Storage",
         "auth": "OAuth",
         "https": "Yes",
@@ -240,6 +268,7 @@ module.exports = [
     "entries": [
       {
         "name": "Currencylayer",
+        "category": "Currency Exchange",
         "description": "Exchange rates and currency conversion",
         "auth": "apiKey",
         "https": "Yes",
@@ -247,6 +276,7 @@ module.exports = [
       },
       {
         "name": "Fixer.io",
+        "category": "Currency Exchange",
         "description": "Exchange rates and currency conversion",
         "auth": "No",
         "https": "Yes",
@@ -259,6 +289,7 @@ module.exports = [
     "entries": [
       {
         "name": "18F",
+        "category": "Data Access",
         "description": "US Federal Government /Developer Program",
         "auth": "No",
         "https": "No",
@@ -266,6 +297,7 @@ module.exports = [
       },
       {
         "name": "Abbreviation",
+        "category": "Data Access",
         "description": "Get abbreviations and meanings",
         "auth": "X-Mashape-Key",
         "https": "Yes",
@@ -273,6 +305,7 @@ module.exports = [
       },
       {
         "name": "CARTO",
+        "category": "Data Access",
         "description": "Location Information Prediction",
         "auth": "apiKey",
         "https": "Yes",
@@ -280,6 +313,7 @@ module.exports = [
       },
       {
         "name": "Callook.info",
+        "category": "Data Access",
         "description": "United States ham radio callsigns",
         "auth": "No",
         "https": "Yes",
@@ -287,6 +321,7 @@ module.exports = [
       },
       {
         "name": "Celebinfo",
+        "category": "Data Access",
         "description": "Celebrity information",
         "auth": "X-Mashape-Key",
         "https": "Yes",
@@ -294,6 +329,7 @@ module.exports = [
       },
       {
         "name": "Colorado Data Engine",
+        "category": "Data Access",
         "description": "Formatted and geolocated Colorado public data",
         "auth": "No",
         "https": "Yes",
@@ -301,6 +337,7 @@ module.exports = [
       },
       {
         "name": "Colorado Information Marketplace",
+        "category": "Data Access",
         "description": "Colorado State Government Open Data",
         "auth": "No",
         "https": "Yes",
@@ -308,6 +345,7 @@ module.exports = [
       },
       {
         "name": "Data USA",
+        "category": "Data Access",
         "description": "US Public Data",
         "auth": "No",
         "https": "Yes",
@@ -315,6 +353,7 @@ module.exports = [
       },
       {
         "name": "Dronestream",
+        "category": "Data Access",
         "description": "Tracks United States drone strikes",
         "auth": "No",
         "https": "No",
@@ -322,6 +361,7 @@ module.exports = [
       },
       {
         "name": "fonoApi",
+        "category": "Data Access",
         "description": "Mobile Device Description",
         "auth": "No",
         "https": "Yes",
@@ -329,6 +369,7 @@ module.exports = [
       },
       {
         "name": "Open Government, Australia",
+        "category": "Data Access",
         "description": "Australian Government Open Data",
         "auth": "No",
         "https": "Yes",
@@ -336,6 +377,7 @@ module.exports = [
       },
       {
         "name": "Open Government, USA",
+        "category": "Data Access",
         "description": "United States Government Open Data",
         "auth": "No",
         "https": "Yes",
@@ -343,6 +385,7 @@ module.exports = [
       },
       {
         "name": "Open Government, Canada",
+        "category": "Data Access",
         "description": "Canadian Government Open Data",
         "auth": "No",
         "https": "No",
@@ -350,6 +393,7 @@ module.exports = [
       },
       {
         "name": "Open Government Data, India",
+        "category": "Data Access",
         "description": "Indian Government Open Data",
         "auth": "token",
         "https": "Yes",
@@ -357,6 +401,7 @@ module.exports = [
       },
       {
         "name": "Pearson",
+        "category": "Data Access",
         "description": "Dictionary Data",
         "auth": "apiKey",
         "https": "No",
@@ -364,6 +409,7 @@ module.exports = [
       },
       {
         "name": "Prague Opendata",
+        "category": "Data Access",
         "description": "Prague City Open Data",
         "auth": "No",
         "https": "No",
@@ -371,6 +417,7 @@ module.exports = [
       },
       {
         "name": "Quandl",
+        "category": "Data Access",
         "description": "Stock Market Data",
         "auth": "No",
         "https": "Yes",
@@ -378,6 +425,7 @@ module.exports = [
       },
       {
         "name": "Represent by Open North",
+        "category": "Data Access",
         "description": "Find Canadian Government Representatives",
         "auth": "No",
         "https": "Yes",
@@ -385,6 +433,7 @@ module.exports = [
       },
       {
         "name": "Scoop.it",
+        "category": "Data Access",
         "description": "Content Curation Service",
         "auth": "apiKey",
         "https": "No",
@@ -392,6 +441,7 @@ module.exports = [
       },
       {
         "name": "Teleport",
+        "category": "Data Access",
         "description": "Quality of Life Data",
         "auth": "No",
         "https": "Yes",
@@ -399,6 +449,7 @@ module.exports = [
       },
       {
         "name": "Wikipedia",
+        "category": "Data Access",
         "description": "Mediawiki Encyclopedia",
         "auth": "No",
         "https": "Yes",
@@ -406,6 +457,7 @@ module.exports = [
       },
       {
         "name": "Wordnik",
+        "category": "Data Access",
         "description": "Dictionary Data",
         "auth": "No",
         "https": "No",
@@ -413,6 +465,7 @@ module.exports = [
       },
       {
         "name": "Yelp",
+        "category": "Data Access",
         "description": "Find Local Business",
         "auth": "OAuth",
         "https": "Yes",
@@ -425,6 +478,7 @@ module.exports = [
     "entries": [
       {
         "name": "languagelayer",
+        "category": "Data Validation",
         "description": "Language detection",
         "auth": "No",
         "https": "Yes",
@@ -432,6 +486,7 @@ module.exports = [
       },
       {
         "name": "Lob.com",
+        "category": "Data Validation",
         "description": "US Address Verification",
         "auth": "apiKey",
         "https": "Yes",
@@ -439,6 +494,7 @@ module.exports = [
       },
       {
         "name": "mailboxlayer",
+        "category": "Data Validation",
         "description": "Email address validation",
         "auth": "No",
         "https": "Yes",
@@ -446,6 +502,7 @@ module.exports = [
       },
       {
         "name": "numverify",
+        "category": "Data Validation",
         "description": "Phone number validation",
         "auth": "No",
         "https": "Yes",
@@ -453,6 +510,7 @@ module.exports = [
       },
       {
         "name": "vatlayer",
+        "category": "Data Validation",
         "description": "VAT number validation",
         "auth": "No",
         "https": "Yes",
@@ -465,6 +523,7 @@ module.exports = [
     "entries": [
       {
         "name": "Adorable Avatars",
+        "category": "Development",
         "description": "Generate random cartoon avatars",
         "auth": "No",
         "https": "Yes",
@@ -472,6 +531,7 @@ module.exports = [
       },
       {
         "name": "APIs.guru",
+        "category": "Development",
         "description": "Wikipedia for Web APIs, OpenAPI/Swagger specs for public APIs",
         "auth": "No",
         "https": "Yes",
@@ -479,6 +539,7 @@ module.exports = [
       },
       {
         "name": "CDNJS",
+        "category": "Development",
         "description": "Library info on CDNJS",
         "auth": "No",
         "https": "Yes",
@@ -486,6 +547,7 @@ module.exports = [
       },
       {
         "name": "Faceplusplus",
+        "category": "Development",
         "description": "A tool to detect face",
         "auth": "OAuth",
         "https": "Yes",
@@ -493,6 +555,7 @@ module.exports = [
       },
       {
         "name": "Genderize.io",
+        "category": "Development",
         "description": "Determines a gender from a first name",
         "auth": "No",
         "https": "Yes",
@@ -500,6 +563,7 @@ module.exports = [
       },
       {
         "name": "Github - User Data",
+        "category": "Development",
         "description": "Pull public information for a user's github",
         "auth": "No",
         "https": "Yes",
@@ -507,6 +571,7 @@ module.exports = [
       },
       {
         "name": "Gitter",
+        "category": "Development",
         "description": "Chat for GitHub",
         "auth": "OAuth",
         "https": "Yes",
@@ -514,6 +579,7 @@ module.exports = [
       },
       {
         "name": "HackerRank",
+        "category": "Development",
         "description": "Compile source code and run against a set of provided test cases",
         "auth": "apiKey",
         "https": "Yes",
@@ -521,6 +587,7 @@ module.exports = [
       },
       {
         "name": "Hipster Ipsum",
+        "category": "Development",
         "description": "Generates Hipster Ipsum text",
         "auth": "No",
         "https": "No",
@@ -528,6 +595,7 @@ module.exports = [
       },
       {
         "name": "IPify",
+        "category": "Development",
         "description": "A simple IP Address API",
         "auth": "No",
         "https": "Yes",
@@ -535,6 +603,7 @@ module.exports = [
       },
       {
         "name": "JSON 2 JSONP",
+        "category": "Development",
         "description": "Convert JSON to JSONP (on-the-fly) for easy cross-domain data requests using client-side JavaScript",
         "auth": "No",
         "https": "Yes",
@@ -542,6 +611,7 @@ module.exports = [
       },
       {
         "name": "JSONPlaceholder",
+        "category": "Development",
         "description": "Fake data for testing and prototyping",
         "auth": "No",
         "https": "No",
@@ -549,6 +619,7 @@ module.exports = [
       },
       {
         "name": "Let's Validate",
+        "category": "Development",
         "description": "Uncovers the technologies used on websites and URL to thumbnail",
         "auth": "No",
         "https": "Yes",
@@ -556,6 +627,7 @@ module.exports = [
       },
       {
         "name": "LiveEdu",
+        "category": "Development",
         "description": "Live Coding Streaming",
         "auth": "OAuth",
         "https": "Yes",
@@ -563,6 +635,7 @@ module.exports = [
       },
       {
         "name": "Lorem Text",
+        "category": "Development",
         "description": "Generates Lorem Ipsum text",
         "auth": "X-Mashape-Key",
         "https": "Yes",
@@ -570,6 +643,7 @@ module.exports = [
       },
       {
         "name": "Loripsum",
+        "category": "Development",
         "description": "The \"lorem ipsum\" generator that doesn't suck",
         "auth": "No",
         "https": "No",
@@ -577,6 +651,7 @@ module.exports = [
       },
       {
         "name": "Myjson",
+        "category": "Development",
         "description": "A simple JSON store for your web or mobile app",
         "auth": "No",
         "https": "No",
@@ -584,6 +659,7 @@ module.exports = [
       },
       {
         "name": "Plino",
+        "category": "Development",
         "description": "Spam filtering system",
         "auth": "No",
         "https": "Yes",
@@ -591,6 +667,7 @@ module.exports = [
       },
       {
         "name": "Random Word",
+        "category": "Development",
         "description": "Generate random word",
         "auth": "No",
         "https": "No",
@@ -598,6 +675,7 @@ module.exports = [
       },
       {
         "name": "RandomUser",
+        "category": "Development",
         "description": "Generates random user data",
         "auth": "No",
         "https": "Yes",
@@ -605,6 +683,7 @@ module.exports = [
       },
       {
         "name": "ReqRes",
+        "category": "Development",
         "description": "A hosted REST-API ready to respond to your AJAX requests",
         "auth": "No",
         "https": "Yes",
@@ -612,6 +691,7 @@ module.exports = [
       },
       {
         "name": "RoboHash",
+        "category": "Development",
         "description": "Generate random robot/alien avatars",
         "auth": "No",
         "https": "Yes",
@@ -619,6 +699,7 @@ module.exports = [
       },
       {
         "name": "StackExchange",
+        "category": "Development",
         "description": "Q&A forum for developers",
         "auth": "OAuth",
         "https": "Yes",
@@ -626,6 +707,7 @@ module.exports = [
       },
       {
         "name": "Stormpath",
+        "category": "Development",
         "description": "User Authentication",
         "auth": "apiKey",
         "https": "Yes",
@@ -633,6 +715,7 @@ module.exports = [
       },
       {
         "name": "UI Names",
+        "category": "Development",
         "description": "Generate random fake names",
         "auth": "No",
         "https": "Yes",
@@ -640,6 +723,7 @@ module.exports = [
       },
       {
         "name": "Verse",
+        "category": "Development",
         "description": "Check what's the latest version of your favorite open-source project",
         "auth": "No",
         "https": "Yes",
@@ -652,6 +736,7 @@ module.exports = [
     "entries": [
       {
         "name": "File.io",
+        "category": "Documents & Productivity",
         "description": "File Sharing",
         "auth": "No",
         "https": "Yes",
@@ -659,6 +744,7 @@ module.exports = [
       },
       {
         "name": "pdflayer API",
+        "category": "Documents & Productivity",
         "description": "HTML/URL to PDF",
         "auth": "No",
         "https": "Yes",
@@ -666,6 +752,7 @@ module.exports = [
       },
       {
         "name": "PrexView",
+        "category": "Documents & Productivity",
         "description": "Data from XML or JSON to PDF, HTML or Image",
         "auth": "apiKey",
         "https": "Yes",
@@ -673,6 +760,7 @@ module.exports = [
       },
       {
         "name": "Todoist",
+        "category": "Documents & Productivity",
         "description": "Todo Lists",
         "auth": "OAuth",
         "https": "Yes",
@@ -680,6 +768,7 @@ module.exports = [
       },
       {
         "name": "Wunderlist",
+        "category": "Documents & Productivity",
         "description": "Todo Lists",
         "auth": "OAuth",
         "https": "Yes",
@@ -692,6 +781,7 @@ module.exports = [
     "entries": [
       {
         "name": "PM2.5.in",
+        "category": "Environment",
         "description": "PM2.5 Data of China",
         "auth": "apiKey",
         "https": "No",
@@ -704,6 +794,7 @@ module.exports = [
     "entries": [
       {
         "name": "Barchart OnDemand",
+        "category": "Finance",
         "description": "Stock, Futures, and Forex Market Data",
         "auth": "apiKey",
         "https": "Yes",
@@ -716,6 +807,7 @@ module.exports = [
     "entries": [
       {
         "name": "PM2.5.in",
+        "category": "Food & Drink",
         "description": "PM2.5 Data of China",
         "auth": "apiKey query string",
         "https": "No",
@@ -723,6 +815,7 @@ module.exports = [
       },
       {
         "name": "AirVisual",
+        "category": "Food & Drink",
         "description": "Air quality and weather data",
         "auth": "apiKey query string",
         "https": "No",
@@ -730,6 +823,7 @@ module.exports = [
       },
       {
         "name": "BigOven",
+        "category": "Food & Drink",
         "description": "Recipe Search",
         "auth": "X-Mashape-Key",
         "https": "No",
@@ -737,6 +831,7 @@ module.exports = [
       },
       {
         "name": "BreweryDB",
+        "category": "Food & Drink",
         "description": "Beer",
         "auth": "apiKey",
         "https": "No",
@@ -744,6 +839,7 @@ module.exports = [
       },
       {
         "name": "Edamam",
+        "category": "Food & Drink",
         "description": "Recipe Search",
         "auth": "apiKey",
         "https": "Yes",
@@ -751,6 +847,7 @@ module.exports = [
       },
       {
         "name": "Food2Fork",
+        "category": "Food & Drink",
         "description": "Recipe Search",
         "auth": "apiKey",
         "https": "No",
@@ -758,6 +855,7 @@ module.exports = [
       },
       {
         "name": "LCBO",
+        "category": "Food & Drink",
         "description": "Alcohol",
         "auth": "apiKey",
         "https": "Yes",
@@ -765,6 +863,7 @@ module.exports = [
       },
       {
         "name": "PunkAPI",
+        "category": "Food & Drink",
         "description": "Brewdog Beer Recipes",
         "auth": "No",
         "https": "Yes",
@@ -772,6 +871,7 @@ module.exports = [
       },
       {
         "name": "Recipe Puppy",
+        "category": "Food & Drink",
         "description": "Food",
         "auth": "No",
         "https": "No",
@@ -779,6 +879,7 @@ module.exports = [
       },
       {
         "name": "Yummly",
+        "category": "Food & Drink",
         "description": "Find food recipes",
         "auth": "No",
         "https": "Yes",
@@ -786,6 +887,7 @@ module.exports = [
       },
       {
         "name": "Zomato",
+        "category": "Food & Drink",
         "description": "Discover restaurants",
         "auth": "apiKey",
         "https": "Yes",
@@ -798,6 +900,7 @@ module.exports = [
     "entries": [
       {
         "name": "Whitepages Pro",
+        "category": "Fraud Prevention",
         "description": "Global identity verification with phone, address, email, and IP",
         "auth": "apiKey",
         "https": "Yes",
@@ -805,6 +908,7 @@ module.exports = [
       },
       {
         "name": "Whitepages Pro",
+        "category": "Fraud Prevention",
         "description": "Phone reputation to detect spammy phones",
         "auth": "apiKey",
         "https": "Yes",
@@ -812,6 +916,7 @@ module.exports = [
       },
       {
         "name": "Whitepages Pro",
+        "category": "Fraud Prevention",
         "description": "Get an owner’s name, address, demographics based on the phone number",
         "auth": "apiKey",
         "https": "Yes",
@@ -819,6 +924,7 @@ module.exports = [
       },
       {
         "name": "Whitepages Pro",
+        "category": "Fraud Prevention",
         "description": "Phone number validation, line_type, carrier append",
         "auth": "apiKey",
         "https": "Yes",
@@ -826,6 +932,7 @@ module.exports = [
       },
       {
         "name": "Whitepages Pro",
+        "category": "Fraud Prevention",
         "description": "Get normalized physical address, residents, address type, and validity.",
         "auth": "apiKey",
         "https": "Yes",
@@ -838,6 +945,7 @@ module.exports = [
     "entries": [
       {
         "name": "Battle.net",
+        "category": "Games & Comics",
         "description": "Blizzard Entertainment",
         "auth": "No",
         "https": "Yes",
@@ -845,6 +953,7 @@ module.exports = [
       },
       {
         "name": "Battlefield 4",
+        "category": "Games & Comics",
         "description": "Battlefield 4 Information",
         "auth": "No",
         "https": "Yes",
@@ -852,6 +961,7 @@ module.exports = [
       },
       {
         "name": "Chuck Norris Database",
+        "category": "Games & Comics",
         "description": "Jokes",
         "auth": "No",
         "https": "No",
@@ -859,6 +969,7 @@ module.exports = [
       },
       {
         "name": "Clash of Clans",
+        "category": "Games & Comics",
         "description": "Clash of Clans Game Information",
         "auth": "No",
         "https": "Yes",
@@ -866,6 +977,7 @@ module.exports = [
       },
       {
         "name": "Clash Royale",
+        "category": "Games & Comics",
         "description": "Clash Royale Game Information",
         "auth": "No",
         "https": "Yes",
@@ -873,6 +985,7 @@ module.exports = [
       },
       {
         "name": "Comic Vine",
+        "category": "Games & Comics",
         "description": "Comics",
         "auth": "No",
         "https": "Yes",
@@ -880,6 +993,7 @@ module.exports = [
       },
       {
         "name": "Deck of Cards",
+        "category": "Games & Comics",
         "description": "Deck of Cards",
         "auth": "No",
         "https": "No",
@@ -887,6 +1001,7 @@ module.exports = [
       },
       {
         "name": "Eve Online",
+        "category": "Games & Comics",
         "description": "Third-Party Developer Documentation",
         "auth": "OAuth required for some parts",
         "https": "Yes",
@@ -894,6 +1009,7 @@ module.exports = [
       },
       {
         "name": "Giant Bomb",
+        "category": "Games & Comics",
         "description": "Video Games",
         "auth": "No",
         "https": "Yes",
@@ -901,6 +1017,7 @@ module.exports = [
       },
       {
         "name": "Guild Wars 2",
+        "category": "Games & Comics",
         "description": "Guild Wars 2 Game Information",
         "auth": "apiKey",
         "https": "Yes",
@@ -908,6 +1025,7 @@ module.exports = [
       },
       {
         "name": "Magic The Gathering",
+        "category": "Games & Comics",
         "description": "Magic The Gathering Game Information",
         "auth": "No",
         "https": "No",
@@ -915,6 +1033,7 @@ module.exports = [
       },
       {
         "name": "Marvel",
+        "category": "Games & Comics",
         "description": "Marvel Comics",
         "auth": "apiKey",
         "https": "No",
@@ -922,6 +1041,7 @@ module.exports = [
       },
       {
         "name": "Minecraft",
+        "category": "Games & Comics",
         "description": "Minecraft server info & user info)",
         "auth": "No",
         "https": "Yes",
@@ -929,6 +1049,7 @@ module.exports = [
       },
       {
         "name": "Open Trivia",
+        "category": "Games & Comics",
         "description": "Trivia Questions",
         "auth": "No",
         "https": "Yes",
@@ -936,6 +1057,7 @@ module.exports = [
       },
       {
         "name": "Pokéapi",
+        "category": "Games & Comics",
         "description": "Pokémon Information",
         "auth": "No",
         "https": "No",
@@ -943,6 +1065,7 @@ module.exports = [
       },
       {
         "name": "Riot Games",
+        "category": "Games & Comics",
         "description": "League of Legends Game Information",
         "auth": "apiKey",
         "https": "Yes",
@@ -950,6 +1073,7 @@ module.exports = [
       },
       {
         "name": "Steam",
+        "category": "Games & Comics",
         "description": "Steam Client Interaction",
         "auth": "OAuth",
         "https": "Yes",
@@ -957,6 +1081,7 @@ module.exports = [
       },
       {
         "name": "SWAPI",
+        "category": "Games & Comics",
         "description": "Star Wars Information",
         "auth": "No",
         "https": "Yes",
@@ -969,6 +1094,7 @@ module.exports = [
     "entries": [
       {
         "name": "Bing Maps",
+        "category": "Geocoding",
         "description": "Create/customize digital maps based on Bing Maps data",
         "auth": "apiKey",
         "https": "Yes",
@@ -976,6 +1102,7 @@ module.exports = [
       },
       {
         "name": "Geocode.xyz",
+        "category": "Geocoding",
         "description": "Provides worldwide forward/reverse geocoding, batch geocoding and geoparsing",
         "auth": "No",
         "https": "Yes",
@@ -983,6 +1110,7 @@ module.exports = [
       },
       {
         "name": "GeoNames",
+        "category": "Geocoding",
         "description": "Place names and other geographical data",
         "auth": "No",
         "https": "No",
@@ -990,6 +1118,7 @@ module.exports = [
       },
       {
         "name": "GéoApi",
+        "category": "Geocoding",
         "description": "French geographical data",
         "auth": "No",
         "https": "Yes",
@@ -997,6 +1126,7 @@ module.exports = [
       },
       {
         "name": "Google Maps",
+        "category": "Geocoding",
         "description": "Create/customize digital maps based on Google Maps data",
         "auth": "apiKey",
         "https": "Yes",
@@ -1004,6 +1134,7 @@ module.exports = [
       },
       {
         "name": "IP 2 Country",
+        "category": "Geocoding",
         "description": "Map an IP to a country",
         "auth": "No",
         "https": "Yes",
@@ -1011,6 +1142,7 @@ module.exports = [
       },
       {
         "name": "IP Address Details",
+        "category": "Geocoding",
         "description": "Find geolocation with ip address",
         "auth": "No",
         "https": "Yes",
@@ -1018,6 +1150,7 @@ module.exports = [
       },
       {
         "name": "IP Vigilante",
+        "category": "Geocoding",
         "description": "Free IP Geolocation API",
         "auth": "No",
         "https": "Yes",
@@ -1025,6 +1158,7 @@ module.exports = [
       },
       {
         "name": "Mapbox",
+        "category": "Geocoding",
         "description": "Create/customize beautiful digital maps",
         "auth": "apiKey",
         "https": "Yes",
@@ -1032,6 +1166,7 @@ module.exports = [
       },
       {
         "name": "Mapzen Search",
+        "category": "Geocoding",
         "description": "Open Source & Open Data Global Geocoding Service",
         "auth": "No",
         "https": "Yes",
@@ -1039,6 +1174,7 @@ module.exports = [
       },
       {
         "name": "Mexico",
+        "category": "Geocoding",
         "description": "Mexico RESTful zip codes API",
         "auth": "No",
         "https": "Yes",
@@ -1046,6 +1182,7 @@ module.exports = [
       },
       {
         "name": "One Map 2.0, Singapore",
+        "category": "Geocoding",
         "description": "Singapore Land Authority`s REST API services for Singapore addresses",
         "auth": "Yes",
         "https": "Yes",
@@ -1053,6 +1190,7 @@ module.exports = [
       },
       {
         "name": "OpenCage",
+        "category": "Geocoding",
         "description": "Forward and reverse geocoding using open data",
         "auth": "No",
         "https": "Yes",
@@ -1060,6 +1198,7 @@ module.exports = [
       },
       {
         "name": "OpenStreetMap",
+        "category": "Geocoding",
         "description": "Navigation, geolocation and geographical data",
         "auth": "OAuth",
         "https": "No",
@@ -1067,6 +1206,7 @@ module.exports = [
       },
       {
         "name": "PostcodeData.nl",
+        "category": "Geocoding",
         "description": "Provide geolocation data based on postcode for Dutch addresses",
         "auth": "No",
         "https": "No",
@@ -1074,6 +1214,7 @@ module.exports = [
       },
       {
         "name": "Postcodes.io",
+        "category": "Geocoding",
         "description": "Postcode lookup & Geolocation for the UK",
         "auth": "No",
         "https": "Yes",
@@ -1081,6 +1222,7 @@ module.exports = [
       },
       {
         "name": "Utah AGRC",
+        "category": "Geocoding",
         "description": "Utah Web API for geocoding Utah addresses",
         "auth": "apiKey",
         "https": "Yes",
@@ -1088,6 +1230,7 @@ module.exports = [
       },
       {
         "name": "ViaCep",
+        "category": "Geocoding",
         "description": "Brazil RESTful zip codes API",
         "auth": "No",
         "https": "Yes",
@@ -1100,6 +1243,7 @@ module.exports = [
     "entries": [
       {
         "name": "Diabetes",
+        "category": "Health",
         "description": "Logging and retrieving diabetes information",
         "auth": "No",
         "https": "No",
@@ -1107,6 +1251,7 @@ module.exports = [
       },
       {
         "name": "Flutrack",
+        "category": "Health",
         "description": "Influenza-like symptoms with geotracking",
         "auth": "No",
         "https": "No",
@@ -1114,6 +1259,7 @@ module.exports = [
       },
       {
         "name": "Makeup",
+        "category": "Health",
         "description": "Makeup Information",
         "auth": "No",
         "https": "No",
@@ -1121,6 +1267,7 @@ module.exports = [
       },
       {
         "name": "Nutritionix",
+        "category": "Health",
         "description": "Worlds largest verified nutrition database",
         "auth": "apiKey",
         "https": "Yes",
@@ -1128,6 +1275,7 @@ module.exports = [
       },
       {
         "name": "openFDA",
+        "category": "Health",
         "description": "Public FDA data about drugs, devices, and foods",
         "auth": "No",
         "https": "Yes",
@@ -1135,6 +1283,7 @@ module.exports = [
       },
       {
         "name": "USDA Nutrients",
+        "category": "Health",
         "description": "National Nutrient Database for Standard Reference",
         "auth": "No",
         "https": "Yes",
@@ -1147,6 +1296,7 @@ module.exports = [
     "entries": [
       {
         "name": "API.AI",
+        "category": "Machine Learning",
         "description": "Natural Language Processing",
         "auth": "apikey",
         "https": "Yes",
@@ -1154,6 +1304,7 @@ module.exports = [
       },
       {
         "name": "Clarifai",
+        "category": "Machine Learning",
         "description": "Computer Vision",
         "auth": "OAuth",
         "https": "Yes",
@@ -1161,6 +1312,7 @@ module.exports = [
       },
       {
         "name": "Cleverbot",
+        "category": "Machine Learning",
         "description": "Web chat bot",
         "auth": "apikey",
         "https": "Yes",
@@ -1168,6 +1320,7 @@ module.exports = [
       },
       {
         "name": "Unplugg",
+        "category": "Machine Learning",
         "description": "Forecasting API for timeseries data",
         "auth": "apikey",
         "https": "Yes",
@@ -1175,6 +1328,7 @@ module.exports = [
       },
       {
         "name": "Wit.ai",
+        "category": "Machine Learning",
         "description": "Natural Language Processing",
         "auth": "OAuth",
         "https": "Yes",
@@ -1187,6 +1341,7 @@ module.exports = [
     "entries": [
       {
         "name": "Newton",
+        "category": "Math",
         "description": "Symbolic and Arithmetic Math Calculator",
         "auth": "No",
         "https": "Yes",
@@ -1199,6 +1354,7 @@ module.exports = [
     "entries": [
       {
         "name": "Deezer",
+        "category": "Music",
         "description": "Music",
         "auth": "OAuth",
         "https": "No",
@@ -1206,6 +1362,7 @@ module.exports = [
       },
       {
         "name": "Discogs",
+        "category": "Music",
         "description": "Music",
         "auth": "OAuth",
         "https": "Yes",
@@ -1213,6 +1370,7 @@ module.exports = [
       },
       {
         "name": "Genius",
+        "category": "Music",
         "description": "Crowdsourced lyrics and music knowledge",
         "auth": "OAuth",
         "https": "Yes",
@@ -1220,6 +1378,7 @@ module.exports = [
       },
       {
         "name": "Jamendo",
+        "category": "Music",
         "description": "Music",
         "auth": "OAuth",
         "https": "Yes",
@@ -1227,6 +1386,7 @@ module.exports = [
       },
       {
         "name": "iTunes Search",
+        "category": "Music",
         "description": "Software products",
         "auth": "No",
         "https": "Yes",
@@ -1234,6 +1394,7 @@ module.exports = [
       },
       {
         "name": "LastFm",
+        "category": "Music",
         "description": "Music",
         "auth": "No",
         "https": "No",
@@ -1241,6 +1402,7 @@ module.exports = [
       },
       {
         "name": "Mixcloud",
+        "category": "Music",
         "description": "Music",
         "auth": "No",
         "https": "Yes",
@@ -1248,6 +1410,7 @@ module.exports = [
       },
       {
         "name": "MusicBrainz",
+        "category": "Music",
         "description": "Music",
         "auth": "No",
         "https": "Yes",
@@ -1255,6 +1418,7 @@ module.exports = [
       },
       {
         "name": "Musikki",
+        "category": "Music",
         "description": "Music",
         "auth": "No",
         "https": "Yes",
@@ -1262,6 +1426,7 @@ module.exports = [
       },
       {
         "name": "Musixmatch",
+        "category": "Music",
         "description": "Music",
         "auth": "apiKey",
         "https": "Yes",
@@ -1269,6 +1434,7 @@ module.exports = [
       },
       {
         "name": "Songsterr",
+        "category": "Music",
         "description": "Provides guitar, bass and drums tabs and chords",
         "auth": "No",
         "https": "Yes",
@@ -1276,6 +1442,7 @@ module.exports = [
       },
       {
         "name": "Soundcloud",
+        "category": "Music",
         "description": "Music",
         "auth": "No",
         "https": "Yes",
@@ -1283,6 +1450,7 @@ module.exports = [
       },
       {
         "name": "Spotify",
+        "category": "Music",
         "description": "Music",
         "auth": "OAuth required for some parts",
         "https": "Yes",
@@ -1290,6 +1458,7 @@ module.exports = [
       },
       {
         "name": "Vagalume",
+        "category": "Music",
         "description": "Crowdsourced lyrics and music knowledge",
         "auth": "apiKey",
         "https": "Yes",
@@ -1302,6 +1471,7 @@ module.exports = [
     "entries": [
       {
         "name": "New York Times",
+        "category": "News",
         "description": "Provides news",
         "auth": "apikey",
         "https": "Yes",
@@ -1309,6 +1479,7 @@ module.exports = [
       },
       {
         "name": "News API",
+        "category": "News",
         "description": "headlines currently published on a range of news sources and blogs",
         "auth": "apikey",
         "https": "Yes",
@@ -1316,6 +1487,7 @@ module.exports = [
       },
       {
         "name": "The Guardian",
+        "category": "News",
         "description": "Access all the content the Guardian creates, categorised by tags and section",
         "auth": "apikey",
         "https": "Yes",
@@ -1328,6 +1500,7 @@ module.exports = [
     "entries": [
       {
         "name": "Countly",
+        "category": "Open Source projects",
         "description": "Countly web analytics",
         "auth": "No",
         "https": "No",
@@ -1335,6 +1508,7 @@ module.exports = [
       },
       {
         "name": "Drupal.org",
+        "category": "Open Source projects",
         "description": "Drupal.org",
         "auth": "No",
         "https": "Yes",
@@ -1342,6 +1516,7 @@ module.exports = [
       },
       {
         "name": "Libraries.io",
+        "category": "Open Source projects",
         "description": "Open source software libraries",
         "auth": "apiKey",
         "https": "Yes",
@@ -1354,6 +1529,7 @@ module.exports = [
     "entries": [
       {
         "name": "chucknorris.io",
+        "category": "Personality",
         "description": "JSON API for hand curated Chuck Norris jokes",
         "auth": "No",
         "https": "Yes",
@@ -1361,6 +1537,7 @@ module.exports = [
       },
       {
         "name": "Forismatic",
+        "category": "Personality",
         "description": "Inspirational Quotes",
         "auth": "No",
         "https": "No",
@@ -1368,6 +1545,7 @@ module.exports = [
       },
       {
         "name": "Medium",
+        "category": "Personality",
         "description": "Community of readers and writers offering unique perspectives on ideas.",
         "auth": "OAuth",
         "https": "Yes",
@@ -1375,6 +1553,7 @@ module.exports = [
       },
       {
         "name": "Quotes on Design",
+        "category": "Personality",
         "description": "Inspirational Quotes",
         "auth": "No",
         "https": "Yes",
@@ -1382,6 +1561,7 @@ module.exports = [
       },
       {
         "name": "Traitify",
+        "category": "Personality",
         "description": "Assess, collect, and analyze Personality",
         "auth": "No",
         "https": "Yes",
@@ -1389,6 +1569,7 @@ module.exports = [
       },
       {
         "name": "tronalddump.io",
+        "category": "Personality",
         "description": "Api & web archive for the things Donald Trump has said",
         "auth": "No",
         "https": "Yes",
@@ -1401,6 +1582,7 @@ module.exports = [
     "entries": [
       {
         "name": "500px",
+        "category": "Photography",
         "description": "Photography Community",
         "auth": "OAuth",
         "https": "Yes",
@@ -1408,6 +1590,7 @@ module.exports = [
       },
       {
         "name": "Flickr",
+        "category": "Photography",
         "description": "Flickr Services",
         "auth": "OAuth",
         "https": "Yes",
@@ -1415,6 +1598,7 @@ module.exports = [
       },
       {
         "name": "Gfycat",
+        "category": "Photography",
         "description": "Jiffier GIFs",
         "auth": "OAuth",
         "https": "Yes",
@@ -1422,6 +1606,7 @@ module.exports = [
       },
       {
         "name": "Giphy",
+        "category": "Photography",
         "description": "Get all your gifs",
         "auth": "No",
         "https": "Yes",
@@ -1429,6 +1614,7 @@ module.exports = [
       },
       {
         "name": "Imgur",
+        "category": "Photography",
         "description": "Images",
         "auth": "OAuth",
         "https": "Yes",
@@ -1436,6 +1622,7 @@ module.exports = [
       },
       {
         "name": "ScreenShotLayer",
+        "category": "Photography",
         "description": "URL 2 Image",
         "auth": "No",
         "https": "Yes",
@@ -1443,6 +1630,7 @@ module.exports = [
       },
       {
         "name": "Unsplash",
+        "category": "Photography",
         "description": "Photography",
         "auth": "OAuth",
         "https": "Yes",
@@ -1455,6 +1643,7 @@ module.exports = [
     "entries": [
       {
         "name": "Fedger.io",
+        "category": "Science",
         "description": "Query machine intelligence data",
         "auth": "No",
         "https": "Yes",
@@ -1462,6 +1651,7 @@ module.exports = [
       },
       {
         "name": "inspirehep.net",
+        "category": "Science",
         "description": "High Energy Physics info. system",
         "auth": "No",
         "https": "Yes",
@@ -1469,6 +1659,7 @@ module.exports = [
       },
       {
         "name": "Launch Library",
+        "category": "Science",
         "description": "Upcoming Space Launches",
         "auth": "No",
         "https": "Yes",
@@ -1476,6 +1667,7 @@ module.exports = [
       },
       {
         "name": "Minor Planet Center",
+        "category": "Science",
         "description": "Asterank.com Information",
         "auth": "No",
         "https": "No",
@@ -1483,6 +1675,7 @@ module.exports = [
       },
       {
         "name": "NASA",
+        "category": "Science",
         "description": "NASA data, including imagery",
         "auth": "No",
         "https": "Yes",
@@ -1490,6 +1683,7 @@ module.exports = [
       },
       {
         "name": "Open Notify",
+        "category": "Science",
         "description": "ISS astronauts, current location, etc",
         "auth": "No",
         "https": "No",
@@ -1497,6 +1691,7 @@ module.exports = [
       },
       {
         "name": "Sunrise and Sunset",
+        "category": "Science",
         "description": "Sunset and sunrise times for a given latitude and longitude.",
         "auth": "No",
         "https": "Yes",
@@ -1504,6 +1699,7 @@ module.exports = [
       },
       {
         "name": "USGS Earthquake Hazards Program",
+        "category": "Science",
         "description": "Earthquakes data real-time",
         "auth": "No",
         "https": "Yes",
@@ -1511,6 +1707,7 @@ module.exports = [
       },
       {
         "name": "World Bank",
+        "category": "Science",
         "description": "World Data",
         "auth": "No",
         "https": "No",
@@ -1523,6 +1720,7 @@ module.exports = [
     "entries": [
       {
         "name": "AXFR Database",
+        "category": "Security",
         "description": "AXFR public database",
         "auth": "No",
         "https": "No",
@@ -1530,6 +1728,7 @@ module.exports = [
       },
       {
         "name": "UK Police",
+        "category": "Security",
         "description": "UK Police data",
         "auth": "No",
         "https": "Yes",
@@ -1542,6 +1741,7 @@ module.exports = [
     "entries": [
       {
         "name": "eBay",
+        "category": "Shopping",
         "description": "Sell and Buy on eBay",
         "auth": "OAuth",
         "https": "Yes",
@@ -1554,6 +1754,7 @@ module.exports = [
     "entries": [
       {
         "name": "Discord",
+        "category": "Social",
         "description": "Make bots for Discord, integrate Discord onto an external platform",
         "auth": "OAuth",
         "https": "Yes",
@@ -1561,6 +1762,7 @@ module.exports = [
       },
       {
         "name": "DonReach Social Count",
+        "category": "Social",
         "description": "Get the social share count of a URL from every major social network",
         "auth": "No",
         "https": "Yes",
@@ -1568,6 +1770,7 @@ module.exports = [
       },
       {
         "name": "Facebook",
+        "category": "Social",
         "description": "Facebook Login, Share on FB, Social Plugins, Analytics and more",
         "auth": "OAuth",
         "https": "Yes",
@@ -1575,6 +1778,7 @@ module.exports = [
       },
       {
         "name": "Foursquare",
+        "category": "Social",
         "description": "Interact with Foursquare users and places (geolocation-based checkins, photos, tips, events, etc)",
         "auth": "OAuth",
         "https": "Yes",
@@ -1582,6 +1786,7 @@ module.exports = [
       },
       {
         "name": "Fuck Off as a Service",
+        "category": "Social",
         "description": "Asks someone to fuck off",
         "auth": "No",
         "https": "Yes",
@@ -1589,6 +1794,7 @@ module.exports = [
       },
       {
         "name": "Full Contact",
+        "category": "Social",
         "description": "Get Social Media profiles and contact Information",
         "auth": "OAuth",
         "https": "Yes",
@@ -1596,6 +1802,7 @@ module.exports = [
       },
       {
         "name": "HackerNews",
+        "category": "Social",
         "description": "Social news for CS and entrepreneurship",
         "auth": "No",
         "https": "Yes",
@@ -1603,6 +1810,7 @@ module.exports = [
       },
       {
         "name": "Instagram",
+        "category": "Social",
         "description": "Instagram Login, Share on Instagram, Social Plugins and more",
         "auth": "OAuth",
         "https": "Yes",
@@ -1610,6 +1818,7 @@ module.exports = [
       },
       {
         "name": "LinkedIn",
+        "category": "Social",
         "description": "The foundation of all digital integrations with LinkedIn",
         "auth": "OAuth",
         "https": "Yes",
@@ -1617,6 +1826,7 @@ module.exports = [
       },
       {
         "name": "Telegram MTProto",
+        "category": "Social",
         "description": "Read and write Telegram data",
         "auth": "OAuth",
         "https": "Yes",
@@ -1624,6 +1834,7 @@ module.exports = [
       },
       {
         "name": "Telegram bot",
+        "category": "Social",
         "description": "Simplified HTTP version of the MTProto API for bots",
         "auth": "OAuth",
         "https": "Yes",
@@ -1631,6 +1842,7 @@ module.exports = [
       },
       {
         "name": "Pinterest",
+        "category": "Social",
         "description": "The world's catalog of ideas",
         "auth": "OAuth",
         "https": "Yes",
@@ -1638,6 +1850,7 @@ module.exports = [
       },
       {
         "name": "PWRTelegram bot",
+        "category": "Social",
         "description": "Boosted version of the Telegram bot API",
         "auth": "OAuth",
         "https": "Yes",
@@ -1645,6 +1858,7 @@ module.exports = [
       },
       {
         "name": "Reddit",
+        "category": "Social",
         "description": "Homepage of the internet",
         "auth": "OAuth",
         "https": "Yes",
@@ -1652,6 +1866,7 @@ module.exports = [
       },
       {
         "name": "Slack",
+        "category": "Social",
         "description": "Team Instant Messaging",
         "auth": "OAuth",
         "https": "Yes",
@@ -1659,6 +1874,7 @@ module.exports = [
       },
       {
         "name": "Tumblr",
+        "category": "Social",
         "description": "Read and write Tumblr Data",
         "auth": "OAuth",
         "https": "Yes",
@@ -1666,6 +1882,7 @@ module.exports = [
       },
       {
         "name": "Twitch",
+        "category": "Social",
         "description": "Game Streaming API",
         "auth": "OAuth",
         "https": "Yes",
@@ -1673,6 +1890,7 @@ module.exports = [
       },
       {
         "name": "Twitter",
+        "category": "Social",
         "description": "Read and write Twitter data",
         "auth": "OAuth",
         "https": "Yes",
@@ -1680,6 +1898,7 @@ module.exports = [
       },
       {
         "name": "vk",
+        "category": "Social",
         "description": "Read and write vk dat",
         "auth": "OAuth",
         "https": "Yes",
@@ -1692,6 +1911,7 @@ module.exports = [
     "entries": [
       {
         "name": "City Bikes",
+        "category": "Sports & Fitness",
         "description": "City Bikes around the world",
         "auth": "No",
         "https": "No",
@@ -1699,6 +1919,7 @@ module.exports = [
       },
       {
         "name": "Ergast F1",
+        "category": "Sports & Fitness",
         "description": "F1 data from the beginning of the world championships in 1950",
         "auth": "No",
         "https": "No",
@@ -1706,6 +1927,7 @@ module.exports = [
       },
       {
         "name": "Fitbit",
+        "category": "Sports & Fitness",
         "description": "Fitbit Information",
         "auth": "OAuth",
         "https": "Yes",
@@ -1713,6 +1935,7 @@ module.exports = [
       },
       {
         "name": "Football-Data.org",
+        "category": "Sports & Fitness",
         "description": "Football Data",
         "auth": "No",
         "https": "No",
@@ -1720,6 +1943,7 @@ module.exports = [
       },
       {
         "name": "JCDecaux Bike",
+        "category": "Sports & Fitness",
         "description": "JCDecaux's self-service bicycles",
         "auth": "apiKey",
         "https": "Yes",
@@ -1727,6 +1951,7 @@ module.exports = [
       },
       {
         "name": "Cricket Live Scores",
+        "category": "Sports & Fitness",
         "description": "live-score",
         "auth": "X-Mashape-Key",
         "https": "Yes",
@@ -1734,6 +1959,7 @@ module.exports = [
       },
       {
         "name": "NFL Arrests",
+        "category": "Sports & Fitness",
         "description": "NFL Arrest Data",
         "auth": "No",
         "https": "No",
@@ -1741,6 +1967,7 @@ module.exports = [
       },
       {
         "name": "Pro Motocross",
+        "category": "Sports & Fitness",
         "description": "The RESTful AMA Pro Motocross lap times for every racer on the start gate",
         "auth": "No",
         "https": "No",
@@ -1748,6 +1975,7 @@ module.exports = [
       },
       {
         "name": "Strava",
+        "category": "Sports & Fitness",
         "description": "Connect with athletes, activities and more",
         "auth": "OAuth",
         "https": "Yes",
@@ -1755,6 +1983,7 @@ module.exports = [
       },
       {
         "name": "UFC Data",
+        "category": "Sports & Fitness",
         "description": "Ultimate Fighting Championship information for events and fighters",
         "auth": "No",
         "https": "No",
@@ -1762,6 +1991,7 @@ module.exports = [
       },
       {
         "name": "Wger",
+        "category": "Sports & Fitness",
         "description": "Workout manager data as exercises, muscles or equipments",
         "auth": "apiKey",
         "https": "Yes",
@@ -1774,6 +2004,7 @@ module.exports = [
     "entries": [
       {
         "name": "Amadeus Travel Innovation Sandbox",
+        "category": "Transportation",
         "description": "Travel Search - Limited usage",
         "auth": "apiKey",
         "https": "Yes",
@@ -1781,6 +2012,7 @@ module.exports = [
       },
       {
         "name": "Community Transit",
+        "category": "Transportation",
         "description": "Transitland API",
         "auth": "No",
         "https": "Yes",
@@ -1788,6 +2020,7 @@ module.exports = [
       },
       {
         "name": "Goibibo",
+        "category": "Transportation",
         "description": "API for travel search",
         "auth": "apiKey",
         "https": "Yes",
@@ -1795,6 +2028,7 @@ module.exports = [
       },
       {
         "name": "Indian Railways",
+        "category": "Transportation",
         "description": "Indian Railways Information",
         "auth": "token",
         "https": "No",
@@ -1802,6 +2036,7 @@ module.exports = [
       },
       {
         "name": "Navitia",
+        "category": "Transportation",
         "description": "The open API for building cool stuff with transport data",
         "auth": "apiKey",
         "https": "Yes",
@@ -1809,6 +2044,7 @@ module.exports = [
       },
       {
         "name": "The Nomad List",
+        "category": "Transportation",
         "description": "A list of the best places to live/work remotely",
         "auth": "No",
         "https": "Yes",
@@ -1816,6 +2052,7 @@ module.exports = [
       },
       {
         "name": "Schiphol Airport",
+        "category": "Transportation",
         "description": "Schiphol",
         "auth": "apiKey",
         "https": "Yes",
@@ -1823,6 +2060,7 @@ module.exports = [
       },
       {
         "name": "TransitLand",
+        "category": "Transportation",
         "description": "Transit Aggregation",
         "auth": "No",
         "https": "Yes",
@@ -1830,6 +2068,7 @@ module.exports = [
       },
       {
         "name": "Transport for Atlanta, US",
+        "category": "Transportation",
         "description": "Marta",
         "auth": "No",
         "https": "No",
@@ -1837,6 +2076,7 @@ module.exports = [
       },
       {
         "name": "Transport for Auckland, New Zealand",
+        "category": "Transportation",
         "description": "Auckland Transport API",
         "auth": "No",
         "https": "Yes",
@@ -1844,6 +2084,7 @@ module.exports = [
       },
       {
         "name": "Transport for Belgium",
+        "category": "Transportation",
         "description": "Belgian transport API",
         "auth": "No",
         "https": "Yes",
@@ -1851,6 +2092,7 @@ module.exports = [
       },
       {
         "name": "Transport for Berlin, Germany",
+        "category": "Transportation",
         "description": "third-party VBB API",
         "auth": "No",
         "https": "Yes",
@@ -1858,6 +2100,7 @@ module.exports = [
       },
       {
         "name": "Transport for Boston, US",
+        "category": "Transportation",
         "description": "MBTA API",
         "auth": "No",
         "https": "No",
@@ -1865,6 +2108,7 @@ module.exports = [
       },
       {
         "name": "Transport for Budapest, Hungary",
+        "category": "Transportation",
         "description": "Budapest public transport API",
         "auth": "No",
         "https": "Yes",
@@ -1872,6 +2116,7 @@ module.exports = [
       },
       {
         "name": "Transport for Chicago, US",
+        "category": "Transportation",
         "description": "CTA",
         "auth": "No",
         "https": "No",
@@ -1879,6 +2124,7 @@ module.exports = [
       },
       {
         "name": "Transport for Czech Republic",
+        "category": "Transportation",
         "description": "Czech transport API",
         "auth": "No",
         "https": "Yes",
@@ -1886,6 +2132,7 @@ module.exports = [
       },
       {
         "name": "Transport for Finland",
+        "category": "Transportation",
         "description": "Finnish transport API",
         "auth": "No",
         "https": "Yes",
@@ -1893,6 +2140,7 @@ module.exports = [
       },
       {
         "name": "Transport for Germany",
+        "category": "Transportation",
         "description": "Deutsche Bahn (DB) API",
         "auth": "apiKey",
         "https": "No",
@@ -1900,6 +2148,7 @@ module.exports = [
       },
       {
         "name": "Transport for India",
+        "category": "Transportation",
         "description": "India Public Transport API",
         "auth": "apiKey",
         "https": "Yes",
@@ -1907,6 +2156,7 @@ module.exports = [
       },
       {
         "name": "Transport for London, England",
+        "category": "Transportation",
         "description": "TfL API",
         "auth": "No",
         "https": "Yes",
@@ -1914,6 +2164,7 @@ module.exports = [
       },
       {
         "name": "Transport for Madrid, Spain",
+        "category": "Transportation",
         "description": "Madrid BUS transport API",
         "auth": "apiKey",
         "https": "No",
@@ -1921,6 +2172,7 @@ module.exports = [
       },
       {
         "name": "Transport for Minneapolis, US",
+        "category": "Transportation",
         "description": "NexTrip API",
         "auth": "OAuth",
         "https": "No",
@@ -1928,6 +2180,7 @@ module.exports = [
       },
       {
         "name": "Transport for New York City, US",
+        "category": "Transportation",
         "description": "MTA",
         "auth": "apiKey",
         "https": "No",
@@ -1935,6 +2188,7 @@ module.exports = [
       },
       {
         "name": "Transport for Norway",
+        "category": "Transportation",
         "description": "Norwegian transport API",
         "auth": "No",
         "https": "No",
@@ -1942,6 +2196,7 @@ module.exports = [
       },
       {
         "name": "Transport for Ottawa, Canada",
+        "category": "Transportation",
         "description": "OC Transpo next bus arrival API",
         "auth": "No",
         "https": "No",
@@ -1949,6 +2204,7 @@ module.exports = [
       },
       {
         "name": "Transport for Paris, France",
+        "category": "Transportation",
         "description": "RATP Open Data API",
         "auth": "No",
         "https": "No",
@@ -1956,6 +2212,7 @@ module.exports = [
       },
       {
         "name": "Transport for Philadelphia, US",
+        "category": "Transportation",
         "description": "SEPTA APIs",
         "auth": "No",
         "https": "No",
@@ -1963,6 +2220,7 @@ module.exports = [
       },
       {
         "name": "Transport for Rio de Janeiro, Brazil",
+        "category": "Transportation",
         "description": "Prefeitura do Rio (City Hall)",
         "auth": "No",
         "https": "No",
@@ -1970,6 +2228,7 @@ module.exports = [
       },
       {
         "name": "Transport for São Paulo, Brazil",
+        "category": "Transportation",
         "description": "SPTrans",
         "auth": "OAuth",
         "https": "No",
@@ -1977,6 +2236,7 @@ module.exports = [
       },
       {
         "name": "Transport for Sweden",
+        "category": "Transportation",
         "description": "Public Transport consumer",
         "auth": "OAuth",
         "https": "Yes",
@@ -1984,6 +2244,7 @@ module.exports = [
       },
       {
         "name": "Transport for Switzerland",
+        "category": "Transportation",
         "description": "Swiss public transport API",
         "auth": "No",
         "https": "Yes",
@@ -1991,6 +2252,7 @@ module.exports = [
       },
       {
         "name": "Transport for Switzerland",
+        "category": "Transportation",
         "description": "Official Swiss Public Transport Open Data",
         "auth": "apiKey",
         "https": "Yes",
@@ -1998,6 +2260,7 @@ module.exports = [
       },
       {
         "name": "Transport for The Netherlands",
+        "category": "Transportation",
         "description": "NS",
         "auth": "No",
         "https": "No",
@@ -2005,6 +2268,7 @@ module.exports = [
       },
       {
         "name": "Transport for Tokyo, Japan",
+        "category": "Transportation",
         "description": "Tokyo Metro",
         "auth": "apiKey",
         "https": "Yes",
@@ -2012,6 +2276,7 @@ module.exports = [
       },
       {
         "name": "Transport for Toronto, Canada",
+        "category": "Transportation",
         "description": "TTC",
         "auth": "No",
         "https": "Yes",
@@ -2019,6 +2284,7 @@ module.exports = [
       },
       {
         "name": "Transport for Vancouver, Canada",
+        "category": "Transportation",
         "description": "TransLink",
         "auth": "OAuth",
         "https": "Yes",
@@ -2026,6 +2292,7 @@ module.exports = [
       },
       {
         "name": "Transport for Victoria, AU",
+        "category": "Transportation",
         "description": "PTV API",
         "auth": "apiKey",
         "https": "Yes",
@@ -2033,6 +2300,7 @@ module.exports = [
       },
       {
         "name": "Transport for Washington, US",
+        "category": "Transportation",
         "description": "Washington Metro transport API",
         "auth": "OAuth",
         "https": "Yes",
@@ -2040,6 +2308,7 @@ module.exports = [
       },
       {
         "name": "Uber",
+        "category": "Transportation",
         "description": "Request Uber rides, reach riders, transport things, and reward drivers",
         "auth": "OAuth",
         "https": "Yes",
@@ -2047,6 +2316,7 @@ module.exports = [
       },
       {
         "name": "WhereIsMyTransport",
+        "category": "Transportation",
         "description": "Platform for public transport data in emerging cities",
         "auth": "OAuth",
         "https": "Yes",
@@ -2059,6 +2329,7 @@ module.exports = [
     "entries": [
       {
         "name": "Universities List",
+        "category": "University",
         "description": "University names, countries and domains",
         "auth": "No",
         "https": "Yes",
@@ -2071,6 +2342,7 @@ module.exports = [
     "entries": [
       {
         "name": "Vehicles",
+        "category": "Vehicle",
         "description": "Lot of vehicles informations",
         "auth": "apiKey",
         "https": "No",
@@ -2078,6 +2350,7 @@ module.exports = [
       },
       {
         "name": "Brazilian Vehicles and Prices",
+        "category": "Vehicle",
         "description": "Vehicles information from Fundação Instituto de Pesquisas Econômicas - Fipe",
         "auth": "No",
         "https": "Yes",
@@ -2085,6 +2358,7 @@ module.exports = [
       },
       {
         "name": "NHTSA Vehicles",
+        "category": "Vehicle",
         "description": "NHTSA Product Information Catalog and Vehicle Listing",
         "auth": "No",
         "https": "Yes",
@@ -2097,6 +2371,7 @@ module.exports = [
     "entries": [
       {
         "name": "An API of Ice And Fire",
+        "category": "Video",
         "description": "Game Of Thrones API",
         "auth": "No",
         "https": "Yes",
@@ -2104,6 +2379,7 @@ module.exports = [
       },
       {
         "name": "Dailymotion",
+        "category": "Video",
         "description": "Dailymotion Developer API",
         "auth": "OAuth",
         "https": "Yes",
@@ -2111,6 +2387,7 @@ module.exports = [
       },
       {
         "name": "MovieDB",
+        "category": "Video",
         "description": "Movie Data",
         "auth": "apiKey",
         "https": "Yes",
@@ -2118,6 +2395,7 @@ module.exports = [
       },
       {
         "name": "Netflix Roulette",
+        "category": "Video",
         "description": "Netflix database",
         "auth": "No",
         "https": "No",
@@ -2125,6 +2403,7 @@ module.exports = [
       },
       {
         "name": "OMDB",
+        "category": "Video",
         "description": "Open movie database",
         "auth": "No",
         "https": "Yes",
@@ -2132,6 +2411,7 @@ module.exports = [
       },
       {
         "name": "Ron Swanson Quotes",
+        "category": "Video",
         "description": "Television",
         "auth": "No",
         "https": "Yes",
@@ -2139,6 +2419,7 @@ module.exports = [
       },
       {
         "name": "TVMaze",
+        "category": "Video",
         "description": "TV Show Data",
         "auth": "No",
         "https": "No",
@@ -2146,6 +2427,7 @@ module.exports = [
       },
       {
         "name": "Vimeo",
+        "category": "Video",
         "description": "Vimeo Developer API",
         "auth": "OAuth",
         "https": "Yes",
@@ -2153,6 +2435,7 @@ module.exports = [
       },
       {
         "name": "YouTube",
+        "category": "Video",
         "description": "Add YouTube functionality to your sites and apps.",
         "auth": "OAuth",
         "https": "Yes",
@@ -2165,6 +2448,7 @@ module.exports = [
     "entries": [
       {
         "name": "Dark Sky",
+        "category": "Weather",
         "description": "Weather",
         "auth": "apiKey",
         "https": "Yes",
@@ -2172,6 +2456,7 @@ module.exports = [
       },
       {
         "name": "MetaWeather",
+        "category": "Weather",
         "description": "Weather",
         "auth": "No",
         "https": "Yes",
@@ -2179,6 +2464,7 @@ module.exports = [
       },
       {
         "name": "OpenWeatherMap",
+        "category": "Weather",
         "description": "Weather",
         "auth": "apiKey",
         "https": "No",
@@ -2186,6 +2472,7 @@ module.exports = [
       },
       {
         "name": "Weatherbit",
+        "category": "Weather",
         "description": "Weather",
         "auth": "apiKey",
         "https": "Yes",
@@ -2193,6 +2480,7 @@ module.exports = [
       },
       {
         "name": "Wunderground",
+        "category": "Weather",
         "description": "Weather",
         "auth": "No",
         "https": "Yes",
@@ -2200,6 +2488,7 @@ module.exports = [
       },
       {
         "name": "Yahoo! Weather",
+        "category": "Weather",
         "description": "Weather",
         "auth": "No",
         "https": "Yes",
