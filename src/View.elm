@@ -1,148 +1,11 @@
-module App exposing (..)
+module View exposing (view)
 
-import Util.Filter as Filter
 import Data.Api exposing (Api)
-import Data.Apis exposing (Apis, ApiFilters, parseApis)
+import Data.Apis as Apis exposing (Apis)
 import Html exposing (..)
 import Html.Attributes exposing (class, colspan, href, type_, value)
-import Html.Events exposing (onCheck, onInput)
-import Json.Decode exposing (Decoder, Value, map)
-
-
-type alias Model =
-    Result String Apis
-
-
-type Msg
-    = SelectCategory String
-    | SelectAuth String
-    | SelectHttps String
-    | Search String
-
-
-init : Value -> ( Model, Cmd Msg )
-init apis =
-    ( parseApis apis, Cmd.none )
-
-
-allLabel : String
-allLabel =
-    "All"
-
-
-valueToMaybe : String -> Maybe String
-valueToMaybe value =
-    if value == "" || value == allLabel then
-        Nothing
-    else
-        Just value
-
-
-setFilter :
-    (String -> Api -> Bool)
-    -> (ApiFilters -> Maybe (Api -> Bool) -> ApiFilters)
-    -> String
-    -> Apis
-    -> Apis
-setFilter filterf setter value ({ filters } as apis) =
-    let
-        updatedFilters =
-            valueToMaybe value
-                |> Maybe.map filterf
-                |> setter filters
-    in
-        { apis | filters = updatedFilters }
-
-
-categoryFilter : String -> Api -> Bool
-categoryFilter value api =
-    api.category == value
-
-
-setCategoryFilter : String -> Apis -> Apis
-setCategoryFilter =
-    setFilter
-        categoryFilter
-        (\filters value -> { filters | category = value })
-
-
-authFilter : String -> Api -> Bool
-authFilter value api =
-    String.startsWith (String.toLower value) (String.toLower api.auth)
-
-
-setAuthFilter : String -> Apis -> Apis
-setAuthFilter =
-    setFilter
-        authFilter
-        (\filters value -> { filters | auth = value })
-
-
-httpsFilter : String -> Api -> Bool
-httpsFilter value api =
-    api.https == value
-
-
-setHttpsFilter : String -> Apis -> Apis
-setHttpsFilter =
-    setFilter
-        httpsFilter
-        (\filters value -> { filters | https = value })
-
-
-searchFilter : String -> Api -> Bool
-searchFilter value api =
-    let
-        containedIn =
-            String.contains (String.toLower value)
-    in
-        containedIn (String.toLower api.name) || containedIn (String.toLower api.description)
-
-
-setSearchFilter : String -> Apis -> Apis
-setSearchFilter =
-    setFilter
-        searchFilter
-        (\filters value -> { filters | search = value })
-
-
-applyFilters : ApiFilters -> Api -> Bool
-applyFilters filters =
-    Filter.singleton
-        >> Filter.applyMaybe filters.category
-        >> Filter.applyMaybe filters.auth
-        >> Filter.applyMaybe filters.https
-        >> Filter.applyMaybe filters.search
-        >> Filter.extract
-
-
-filterEntries : Apis -> List Api
-filterEntries { filters, all } =
-    List.filter (applyFilters filters) all
-
-
-update : Msg -> Model -> ( Model, Cmd Msg )
-update msg model =
-    case msg of
-        SelectCategory name ->
-            ( Result.map (setCategoryFilter name) model
-            , Cmd.none
-            )
-
-        SelectAuth name ->
-            ( Result.map (setAuthFilter name) model
-            , Cmd.none
-            )
-
-        SelectHttps value ->
-            ( Result.map (setHttpsFilter value) model
-            , Cmd.none
-            )
-
-        Search value ->
-            ( Result.map (setSearchFilter value) model
-            , Cmd.none
-            )
+import Html.Events exposing (onInput)
+import Update exposing (Model, Msg(..))
 
 
 categoryOption : String -> Html Msg
@@ -152,7 +15,7 @@ categoryOption name =
 
 allOption : Html Msg
 allOption =
-    option [ value "" ] [ text allLabel ]
+    option [ value "" ] [ text Apis.allLabel ]
 
 
 categoriesSelect : List String -> Html Msg
@@ -254,7 +117,7 @@ apiTable apis =
             , columnHeader "HTTPS"
             , columnHeader "Link"
             ]
-        , apiTableBody (filterEntries apis)
+        , apiTableBody (Apis.filterEntries apis)
         ]
 
 
@@ -296,8 +159,3 @@ view model =
                     [ h2 [] [ text "Error parsing APIs" ]
                     ]
                 ]
-
-
-subscriptions : Model -> Sub Msg
-subscriptions model =
-    Sub.none
