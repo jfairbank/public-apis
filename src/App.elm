@@ -217,6 +217,11 @@ apiTable apis =
         ]
 
 
+githubRepo : String
+githubRepo =
+    "https://github.com/jfairbank/public-apis"
+
+
 view : Model -> Html Msg
 view model =
     case model of
@@ -225,6 +230,8 @@ view model =
                 [ div [ class "page-header" ]
                     [ h1 []
                         [ text "Public APIs"
+                        , small []
+                            [ a [ href githubRepo ] [ text "GitHub Repo" ] ]
                         ]
                     ]
                 , div [ class "filters" ]

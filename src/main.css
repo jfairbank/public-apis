@@ -2,6 +2,10 @@ body {
   font-family: 'Source Sans Pro', 'Trebuchet MS', 'Lucida Grande', 'Bitstream Vera Sans', 'Helvetica Neue', sans-serif;
 }
 
+.page-header small {
+  margin-left: 20px;
+}
+
 label {
   display: block;
 }
