@@ -13,6 +13,7 @@ type alias FilterF =
 type alias ApiFilters =
     { category : Maybe FilterF
     , auth : Maybe FilterF
+    , https : Maybe FilterF
     }
 
 
@@ -47,7 +48,7 @@ apisFromCategories categories =
         (extractCategoryNames categories)
         (createByCategoryDict categories)
         (extractAll categories)
-        (ApiFilters Nothing Nothing)
+        (ApiFilters Nothing Nothing Nothing)
 
 
 apisDecoder : Decoder Apis

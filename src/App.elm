@@ -4,8 +4,8 @@ import Util.Filter as Filter
 import Data.Api exposing (Api)
 import Data.Apis exposing (Apis, ApiFilters, parseApis)
 import Html exposing (..)
-import Html.Attributes exposing (class, href, value)
-import Html.Events exposing (onInput)
+import Html.Attributes exposing (class, href, type_, value)
+import Html.Events exposing (onCheck, onInput)
 import Json.Decode exposing (Decoder, Value, map)
 
 
@@ -16,6 +16,7 @@ type alias Model =
 type Msg
     = SelectCategory String
     | SelectAuth String
+    | SelectHttps String
 
 
 init : Value -> ( Model, Cmd Msg )
@@ -28,33 +29,64 @@ allLabel =
     "All"
 
 
+valueToMaybe : String -> Maybe String
+valueToMaybe value =
+    if value == "" || value == allLabel then
+        Nothing
+    else
+        Just value
+
+
 setFilter :
-    (Api -> String)
+    (String -> Api -> Bool)
     -> (ApiFilters -> Maybe (Api -> Bool) -> ApiFilters)
     -> String
     -> Apis
     -> Apis
-setFilter getField setter value ({ filters } as apis) =
+setFilter filterf setter value ({ filters } as apis) =
     let
         updatedFilters =
-            if value == "" || value == allLabel then
-                setter filters Nothing
-            else
-                setter filters (Just (getField >> (==) value))
+            valueToMaybe value
+                |> Maybe.map filterf
+                |> setter filters
     in
         { apis | filters = updatedFilters }
 
 
+categoryFilter : String -> Api -> Bool
+categoryFilter value api =
+    api.category == value
+
+
 setCategoryFilter : String -> Apis -> Apis
 setCategoryFilter =
-    setFilter .category
+    setFilter
+        categoryFilter
         (\filters value -> { filters | category = value })
+
+
+authFilter : String -> Api -> Bool
+authFilter value api =
+    String.startsWith (String.toLower value) (String.toLower api.auth)
 
 
 setAuthFilter : String -> Apis -> Apis
 setAuthFilter =
-    setFilter .auth
+    setFilter
+        authFilter
         (\filters value -> { filters | auth = value })
+
+
+httpsFilter : String -> Api -> Bool
+httpsFilter value api =
+    api.https == value
+
+
+setHttpsFilter : String -> Apis -> Apis
+setHttpsFilter =
+    setFilter
+        httpsFilter
+        (\filters value -> { filters | https = value })
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -67,6 +99,11 @@ update msg model =
 
         SelectAuth name ->
             ( Result.map (setAuthFilter name) model
+            , Cmd.none
+            )
+
+        SelectHttps value ->
+            ( Result.map (setHttpsFilter value) model
             , Cmd.none
             )
 
@@ -102,6 +139,18 @@ authSelect =
             , option [ value "apiKey" ] [ text "apiKey" ]
             , option [ value "X-Mashape-Key" ] [ text "X-Mashape-Key" ]
             , option [ value "token" ] [ text "token" ]
+            ]
+        ]
+
+
+httpsSelect : Html Msg
+httpsSelect =
+    div []
+        [ label [] [ text "Filter by HTTPS:" ]
+        , select [ onInput SelectHttps ]
+            [ allOption
+            , option [ value "Yes" ] [ text "Yes" ]
+            , option [ value "No" ] [ text "No" ]
             ]
         ]
 
@@ -144,6 +193,7 @@ applyFilters filters =
     Filter.singleton
         >> Filter.applyMaybe filters.category
         >> Filter.applyMaybe filters.auth
+        >> Filter.applyMaybe filters.https
         >> Filter.extract
 
 
@@ -177,8 +227,11 @@ view model =
                         [ text "Public APIs"
                         ]
                     ]
-                , categoriesSelect apis.categories
-                , authSelect
+                , div [ class "filters" ]
+                    [ div [ class "filter" ] [ categoriesSelect apis.categories ]
+                    , div [ class "filter" ] [ authSelect ]
+                    , div [ class "filter" ] [ httpsSelect ]
+                    ]
                 , apiTable apis
                 ]
 

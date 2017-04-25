@@ -10,6 +10,15 @@ select {
   margin-bottom: 20px;
 }
 
+.filters {
+  display: flex;
+  flex-direction: row;
+}
+
+.filter + .filter {
+  margin-left: 20px;
+}
+
 .alert-danger {
   margin-top: 20px;
   text-align: center;
