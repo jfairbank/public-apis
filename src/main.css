@@ -23,6 +23,12 @@ select {
   margin-left: 20px;
 }
 
+.no-results {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
 .alert-danger {
   margin-top: 20px;
   text-align: center;

@@ -4,7 +4,7 @@ import Util.Filter as Filter
 import Data.Api exposing (Api)
 import Data.Apis exposing (Apis, ApiFilters, parseApis)
 import Html exposing (..)
-import Html.Attributes exposing (class, href, type_, value)
+import Html.Attributes exposing (class, colspan, href, type_, value)
 import Html.Events exposing (onCheck, onInput)
 import Json.Decode exposing (Decoder, Value, map)
 
@@ -17,6 +17,7 @@ type Msg
     = SelectCategory String
     | SelectAuth String
     | SelectHttps String
+    | Search String
 
 
 init : Value -> ( Model, Cmd Msg )
@@ -89,6 +90,37 @@ setHttpsFilter =
         (\filters value -> { filters | https = value })
 
 
+searchFilter : String -> Api -> Bool
+searchFilter value api =
+    let
+        containedIn =
+            String.contains (String.toLower value)
+    in
+        containedIn (String.toLower api.name) || containedIn (String.toLower api.description)
+
+
+setSearchFilter : String -> Apis -> Apis
+setSearchFilter =
+    setFilter
+        searchFilter
+        (\filters value -> { filters | search = value })
+
+
+applyFilters : ApiFilters -> Api -> Bool
+applyFilters filters =
+    Filter.singleton
+        >> Filter.applyMaybe filters.category
+        >> Filter.applyMaybe filters.auth
+        >> Filter.applyMaybe filters.https
+        >> Filter.applyMaybe filters.search
+        >> Filter.extract
+
+
+filterEntries : Apis -> List Api
+filterEntries { filters, all } =
+    List.filter (applyFilters filters) all
+
+
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
@@ -104,6 +136,11 @@ update msg model =
 
         SelectHttps value ->
             ( Result.map (setHttpsFilter value) model
+            , Cmd.none
+            )
+
+        Search value ->
+            ( Result.map (setSearchFilter value) model
             , Cmd.none
             )
 
@@ -155,6 +192,14 @@ httpsSelect =
         ]
 
 
+searchView : Html Msg
+searchView =
+    div []
+        [ label [] [ text "Search:" ]
+        , input [ type_ "text", onInput Search ] []
+        ]
+
+
 columnHeader : String -> Html msg
 columnHeader value =
     th [] [ text value ]
@@ -183,23 +228,19 @@ tableHeader columnHeaders =
     thead [] [ tr [] columnHeaders ]
 
 
-tableBody : (a -> Html msg) -> List a -> Html msg
-tableBody f items =
-    tbody [] (List.map f items)
+apiTableBody : List Api -> Html Msg
+apiTableBody entries =
+    tbody [] <|
+        case entries of
+            [] ->
+                [ tr []
+                    [ td [ class "no-results", colspan 6 ]
+                        [ text "No Results" ]
+                    ]
+                ]
 
-
-applyFilters : ApiFilters -> Api -> Bool
-applyFilters filters =
-    Filter.singleton
-        >> Filter.applyMaybe filters.category
-        >> Filter.applyMaybe filters.auth
-        >> Filter.applyMaybe filters.https
-        >> Filter.extract
-
-
-filterEntries : Apis -> List Api
-filterEntries { filters, all } =
-    List.filter (applyFilters filters) all
+            _ ->
+                List.map apiRow entries
 
 
 apiTable : Apis -> Html Msg
@@ -213,13 +254,18 @@ apiTable apis =
             , columnHeader "HTTPS"
             , columnHeader "Link"
             ]
-        , tableBody apiRow (filterEntries apis)
+        , apiTableBody (filterEntries apis)
         ]
 
 
 githubRepo : String
 githubRepo =
     "https://github.com/jfairbank/public-apis"
+
+
+filterView : Html Msg -> Html Msg
+filterView child =
+    div [ class "filter" ] [ child ]
 
 
 view : Model -> Html Msg
@@ -235,10 +281,12 @@ view model =
                         ]
                     ]
                 , div [ class "filters" ]
-                    [ div [ class "filter" ] [ categoriesSelect apis.categories ]
-                    , div [ class "filter" ] [ authSelect ]
-                    , div [ class "filter" ] [ httpsSelect ]
+                    [ filterView (categoriesSelect apis.categories)
+                    , filterView authSelect
+                    , filterView httpsSelect
                     ]
+                , searchView
+                , br [] []
                 , apiTable apis
                 ]
 
