@@ -1,6 +1,8 @@
 module Fixture.Apis
     exposing
-        ( apiFiltersNothing
+        ( apiFromCategory
+        , apiFromAuth
+        , apiFiltersNothing
         , apiListByNameFixtures
         , apiListByCategoryFixtures
         , apiListByDescriptionFixtures
@@ -47,6 +49,16 @@ apiFixtures f value =
         ( api, apiToValue api )
 
 
+apiFromCategory : String -> Api
+apiFromCategory category =
+    Api "Fake" category "Fake" "Yes" "Yes" "http://example.com"
+
+
+apiFromAuth : String -> Api
+apiFromAuth auth =
+    Api "Fake" "Fake" "Fake" auth "Yes" "http://example.com"
+
+
 apiNameFixtures : String -> ( Api, Value )
 apiNameFixtures =
     apiFixtures
@@ -55,8 +67,7 @@ apiNameFixtures =
 
 apiCategoryFixtures : String -> ( Api, Value )
 apiCategoryFixtures =
-    apiFixtures
-        (\category -> Api "Fake" category "Fake" "Yes" "Yes" "http://example.com")
+    apiFixtures apiFromCategory
 
 
 apiDescriptionFixtures : String -> ( Api, Value )
@@ -67,8 +78,7 @@ apiDescriptionFixtures =
 
 apiAuthFixtures : String -> ( Api, Value )
 apiAuthFixtures =
-    apiFixtures
-        (\auth -> Api "Fake" "Fake" "Fake" auth "Yes" "http://example.com")
+    apiFixtures apiFromAuth
 
 
 apiHttpsFixtures : String -> ( Api, Value )
