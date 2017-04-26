@@ -11,11 +11,10 @@ module Data.Apis
         , filterEntries
         )
 
+import Set
 import Util.Filter as Filter
-import Data.Api exposing (Api)
-import Data.Category exposing (Category, categoriesDecoder)
-import Dict exposing (Dict)
-import Json.Decode exposing (Decoder, Value, decodeValue, map)
+import Data.Api exposing (Api, apiDecoder)
+import Json.Decode exposing (Decoder, Value, decodeValue, list, map)
 
 
 type alias FilterF =
@@ -31,42 +30,30 @@ type alias ApiFilters =
 
 
 type alias Apis =
-    { categories : List String
-    , byCategory : Dict String (List Api)
-    , all : List Api
+    { entries : List Api
+    , categories : List String
     , filters : ApiFilters
     }
 
 
-extractCategoryNames : List Category -> List String
+extractCategoryNames : List Api -> List String
 extractCategoryNames =
-    List.map .name
+    List.map .category
+        >> Set.fromList
+        >> Set.toList
 
 
-createByCategoryDict : List Category -> Dict String (List Api)
-createByCategoryDict =
-    List.foldl
-        (\category -> Dict.insert category.name category.entries)
-        Dict.empty
-
-
-extractAll : List Category -> List Api
-extractAll =
-    List.concatMap .entries
-
-
-apisFromCategories : List Category -> Apis
-apisFromCategories categories =
+apisFromEntries : List Api -> Apis
+apisFromEntries entries =
     Apis
-        (extractCategoryNames categories)
-        (createByCategoryDict categories)
-        (extractAll categories)
+        entries
+        (extractCategoryNames entries)
         (ApiFilters Nothing Nothing Nothing Nothing)
 
 
 apisDecoder : Decoder Apis
 apisDecoder =
-    map apisFromCategories categoriesDecoder
+    map apisFromEntries (list apiDecoder)
 
 
 parseApis : Value -> Result String Apis
@@ -166,5 +153,5 @@ applyFilters filters =
 
 
 filterEntries : Apis -> List Api
-filterEntries { filters, all } =
-    List.filter (applyFilters filters) all
+filterEntries { filters, entries } =
+    List.filter (applyFilters filters) entries

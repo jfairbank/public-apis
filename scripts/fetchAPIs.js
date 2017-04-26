@@ -32,14 +32,14 @@ function parseEntry(categoryName, line) {
 function parse(contents) {
   const READY = 'READY';
   const HEADER = 'HEADER';
-  const TABLE = 'TABLE';
+  const APIS = 'APIS';
 
   const categoryRegex = /^### (.+)/;
   const headerStopRegex = /^\|---\|/;
 
   const lines = contents.split('\n');
 
-  return lines.reduce(({ state, tables, currentTable }, line) => {
+  return lines.reduce(({ state, entries, currentCategoryName }, line) => {
     switch (state) {
       case READY: {
         let match;
@@ -48,12 +48,7 @@ function parse(contents) {
           const category = match[1].trim();
 
           state = HEADER;
-          currentTable = [];
-
-          currentTable = {
-            name: match[1].trim(),
-            entries: [],
-          };
+          currentCategoryName = match[1].trim();
         }
 
         break;
@@ -61,32 +56,31 @@ function parse(contents) {
 
       case HEADER: {
         if (headerStopRegex.test(line)) {
-          state = TABLE;
+          state = APIS;
         }
 
         break;
       }
 
-      case TABLE: {
+      case APIS: {
         if (!line.trim()) {
           state = READY;
-          tables.push(currentTable);
-          currentTable = null;
+          currentCategoryName = '';
         } else {
-          const entry = parseEntry(currentTable.name, line);
-          currentTable.entries.push(entry);
+          const entry = parseEntry(currentCategoryName, line);
+          entries.push(entry);
         }
 
         break;
       }
     }
 
-    return { state, tables, currentTable };
+    return { state, entries, currentCategoryName };
   }, {
     state: READY,
-    tables: [],
-    currentTable: null,
-  }).tables;
+    entries: [],
+    currentCategoryName: '',
+  }).entries;
 }
 
 async function fetchSource() {
