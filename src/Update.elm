@@ -17,14 +17,14 @@ type Msg
 updateApis : Msg -> Apis -> Apis
 updateApis msg =
     case msg of
-        SelectCategory name ->
-            Apis.setCategoryFilter name
+        SelectCategory category ->
+            Apis.setCategoryFilter category
 
-        SelectAuth name ->
-            Apis.setAuthFilter name
+        SelectAuth auth ->
+            Apis.setAuthFilter auth
 
-        SelectHttps value ->
-            Apis.setHttpsFilter value
+        SelectHttps https ->
+            Apis.setHttpsFilter https
 
         Search value ->
             Apis.setSearchFilter value
