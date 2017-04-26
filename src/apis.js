@@ -575,7 +575,7 @@ module.exports = [
         "description": "Chat for GitHub",
         "auth": "OAuth",
         "https": "Yes",
-        "link": "https://developer.gitter.im/docs/welcome"
+        "link": "https://github.com/gitterHQ/docs"
       },
       {
         "name": "HackerRank",
@@ -616,6 +616,14 @@ module.exports = [
         "auth": "No",
         "https": "No",
         "link": "http://jsonplaceholder.typicode.com/"
+      },
+      {
+        "name": "Judge0 API",
+        "category": "Development",
+        "description": "Compile and run source code",
+        "auth": "No",
+        "https": "Yes",
+        "link": "https://api.judge0.com/"
       },
       {
         "name": "Let's Validate",
@@ -780,9 +788,25 @@ module.exports = [
     "name": "Environment",
     "entries": [
       {
+        "name": "AirVisual",
+        "category": "Environment",
+        "description": "Air quality and weather data",
+        "auth": "apiKey",
+        "https": "Yes",
+        "link": "https://airvisual.com/api"
+      },
+      {
+        "name": "OpenAQ",
+        "category": "Environment",
+        "description": "Open air quality data",
+        "auth": "apiKey",
+        "https": "Yes",
+        "link": "https://docs.openaq.org/"
+      },
+      {
         "name": "PM2.5.in",
         "category": "Environment",
-        "description": "PM2.5 Data of China",
+        "description": "Air quality of China",
         "auth": "apiKey",
         "https": "No",
         "link": "http://www.pm25.in/api_doc"
@@ -805,22 +829,6 @@ module.exports = [
   {
     "name": "Food & Drink",
     "entries": [
-      {
-        "name": "PM2.5.in",
-        "category": "Food & Drink",
-        "description": "PM2.5 Data of China",
-        "auth": "apiKey query string",
-        "https": "No",
-        "link": "http://www.pm25.in/api_doc"
-      },
-      {
-        "name": "AirVisual",
-        "category": "Food & Drink",
-        "description": "Air quality and weather data",
-        "auth": "apiKey query string",
-        "https": "No",
-        "link": "https://airvisual.com/api"
-      },
       {
         "name": "BigOven",
         "category": "Food & Drink",
@@ -876,6 +884,14 @@ module.exports = [
         "auth": "No",
         "https": "No",
         "link": "http://www.recipepuppy.com/about/api/"
+      },
+      {
+        "name": "TacoFancy",
+        "category": "Food & Drink",
+        "description": "Community-driven taco database",
+        "auth": "No",
+        "https": "No",
+        "link": "https://github.com/evz/tacofancy-api"
       },
       {
         "name": "Yummly",
@@ -1093,6 +1109,14 @@ module.exports = [
     "name": "Geocoding",
     "entries": [
       {
+        "name": "adresse.data.gouv.fr",
+        "category": "Geocoding",
+        "description": "Address database of France. geocoding and reverse.",
+        "auth": "No",
+        "https": "Yes",
+        "link": "https://adresse.data.gouv.fr"
+      },
+      {
         "name": "Bing Maps",
         "category": "Geocoding",
         "description": "Create/customize digital maps based on Bing Maps data",
@@ -1183,7 +1207,7 @@ module.exports = [
       {
         "name": "One Map 2.0, Singapore",
         "category": "Geocoding",
-        "description": "Singapore Land Authority`s REST API services for Singapore addresses",
+        "description": "Singapore Land Authority REST API services for Singapore addresses",
         "auth": "Yes",
         "https": "Yes",
         "link": "https://docs.onemap.sg/"
