@@ -5,6 +5,7 @@ node_js:
 
 script:
   - npm install -g create-elm-app@^0.6.0
+  - npm test
   - npm run build
 
 deploy:

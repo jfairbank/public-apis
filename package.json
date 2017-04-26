@@ -24,7 +24,9 @@
     "build:validation": "elm make ./src/ValidateApis.elm --output ./scripts/ValidateApis.js",
     "deploy": "npm run build && cp CNAME dist/ && surge -p dist/",
     "dev": "elm-app start",
-    "fetch:apis": "npm run build:validation && node ./scripts/fetchAPIs"
+    "fetch:apis": "npm run build:validation && node ./scripts/fetchAPIs",
+    "test": "elm-app test",
+    "watch:test": "elm-app test --watch"
   },
   "repository": {
     "type": "git",
