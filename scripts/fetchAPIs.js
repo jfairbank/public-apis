@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const fetch = require('node-fetch');
+const { ValidateApis } = require('./ValidateApis');
 
 const promisify = fn => (...args) => new Promise((resolve, reject) => {
   fn(...args, (err, result) => {
@@ -97,10 +98,33 @@ async function fetchSource() {
   return response.text();
 }
 
+function validateApis(apis) {
+  return new Promise((resolve, reject) => {
+    const { ports } = ValidateApis.worker();
+
+    function callback(isValid) {
+      if (isValid) {
+        resolve();
+      } else {
+        reject(new Error('Invalid APIs format'));
+      }
+
+      ports.isValid.unsubscribe(callback);
+    }
+
+    ports.isValid.subscribe(callback);
+
+    ports.receiveApis.send(apis);
+  });
+}
+
 async function main() {
   try {
-    const data = parse(await fetchSource());
-    const json = JSON.stringify(data, null, 2);
+    const apis = parse(await fetchSource());
+
+    await validateApis(apis);
+
+    const json = JSON.stringify(apis, null, 2);
     const contents = `module.exports = ${json};`;
     const file = path.resolve(__dirname, '../src/apis.js');
 
@@ -111,6 +135,7 @@ async function main() {
     console.error('\nError updating APIs');
     console.error('-------------------');
     console.error(e);
+    process.exit(1);
   }
 }
 

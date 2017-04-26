@@ -11,6 +11,7 @@
     "test": "tests"
   },
   "dependencies": {
+    "elm": "^0.18.0",
     "encoding": "^0.1.12",
     "iconv-lite": "^0.4.15",
     "is-stream": "^1.1.0",
@@ -20,9 +21,10 @@
   "devDependencies": {},
   "scripts": {
     "build": "elm-app build",
+    "build:validation": "elm make ./src/ValidateApis.elm --output ./scripts/ValidateApis.js",
     "deploy": "npm run build && cp CNAME dist/ && surge -p dist/",
     "dev": "elm-app start",
-    "fetch:apis": "node ./scripts/fetchAPIs"
+    "fetch:apis": "npm run build:validation && node ./scripts/fetchAPIs"
   },
   "repository": {
     "type": "git",
