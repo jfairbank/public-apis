@@ -3,7 +3,7 @@ module.exports = [
     "name": "IUCN",
     "category": "Animals",
     "description": "IUCN Red List of Threatened Species",
-    "auth": "token",
+    "auth": "apiKey",
     "https": "No",
     "link": "http://apiv3.iucnredlist.org/api/v3/docs"
   },
@@ -11,7 +11,7 @@ module.exports = [
     "name": "Petfinder",
     "category": "Animals",
     "description": "Adoption",
-    "auth": "Yes",
+    "auth": "apiKey",
     "https": "Yes",
     "link": "https://www.petfinder.com/developers/api-docs/"
   },
@@ -32,12 +32,20 @@ module.exports = [
     "link": "http://anilist-api.readthedocs.io/en/latest/"
   },
   {
+    "name": "Jikan",
+    "category": "Anime",
+    "description": "Unofficial MyAnimeList API",
+    "auth": "No",
+    "https": "Yes",
+    "link": "https://jikan.me"
+  },
+  {
     "name": "Kitsu",
     "category": "Anime",
-    "description": "Kitsu Anime",
+    "description": "Anime discovery platform",
     "auth": "OAuth",
-    "https": "No",
-    "link": "http://docs.kitsu17.apiary.io/"
+    "https": "Yes",
+    "link": "http://docs.kitsu.apiary.io/"
   },
   {
     "name": "Studio Ghibli",
@@ -51,7 +59,7 @@ module.exports = [
     "name": "Certly",
     "category": "Anti-Malware",
     "description": "Certly Link/Domain Flagging",
-    "auth": "token",
+    "auth": "apiKey",
     "https": "Yes",
     "link": "https://guard.certly.io/"
   },
@@ -59,7 +67,7 @@ module.exports = [
     "name": "Google Safe Browsing",
     "category": "Anti-Malware",
     "description": "Google Link/Domain Flagging",
-    "auth": "token",
+    "auth": "apiKey",
     "https": "Yes",
     "link": "https://developers.google.com/safe-browsing/"
   },
@@ -67,7 +75,7 @@ module.exports = [
     "name": "Metacert",
     "category": "Anti-Malware",
     "description": "Metacert Link Flagging",
-    "auth": "token",
+    "auth": "apiKey",
     "https": "Yes",
     "link": "https://metacert.com/"
   },
@@ -75,7 +83,7 @@ module.exports = [
     "name": "VirusTotal",
     "category": "Anti-Malware",
     "description": "VirusTotal File/URL Analysis",
-    "auth": "token",
+    "auth": "apiKey",
     "https": "Yes",
     "link": "https://www.virustotal.com/en/documentation/public-api/"
   },
@@ -115,7 +123,7 @@ module.exports = [
     "name": "Rijksmuseum",
     "category": "Art & Design",
     "description": "Art",
-    "auth": "No",
+    "auth": "apiKey",
     "https": "Yes",
     "link": "https://www.rijksmuseum.nl/en/api"
   },
@@ -170,7 +178,7 @@ module.exports = [
   {
     "name": "Holidays",
     "category": "Calendar",
-    "description": "Free API for obtaining information about holidays.",
+    "description": "Historical data regarding holidays",
     "auth": "apiKey",
     "https": "Yes",
     "link": "https://holidayapi.com/"
@@ -347,7 +355,7 @@ module.exports = [
     "name": "Open Government Data, India",
     "category": "Data Access",
     "description": "Indian Government Open Data",
-    "auth": "token",
+    "auth": "apiKey",
     "https": "Yes",
     "link": "https://data.gov.in/"
   },
@@ -616,6 +624,14 @@ module.exports = [
     "link": "https://plino.herokuapp.com/"
   },
   {
+    "name": "Public APIs",
+    "category": "Development",
+    "description": "A collective list of free JSON APIs for use in web development",
+    "auth": "No",
+    "https": "Yes",
+    "link": "https://github.com/toddmotto/public-apis/tree/master/json"
+  },
+  {
     "name": "Random Word",
     "category": "Development",
     "description": "Generate random word",
@@ -752,6 +768,22 @@ module.exports = [
     "link": "https://www.barchartondemand.com/free"
   },
   {
+    "name": "CoinDesk",
+    "category": "Finance",
+    "description": "Bitcoin Price Index",
+    "auth": "No",
+    "https": "No",
+    "link": "http://www.coindesk.com/api/"
+  },
+  {
+    "name": "Consumer Financial Protection Bureau",
+    "category": "Finance",
+    "description": "Financial services consumer complains data",
+    "auth": "apiKey",
+    "https": "Yes",
+    "link": "https://data.consumerfinance.gov/resource/jhzv-w97w.json"
+  },
+  {
     "name": "BigOven",
     "category": "Food & Drink",
     "description": "Recipe Search",
@@ -814,6 +846,14 @@ module.exports = [
     "auth": "No",
     "https": "No",
     "link": "https://github.com/evz/tacofancy-api"
+  },
+  {
+    "name": "TheCocktailDB",
+    "category": "Food & Drink",
+    "description": "Cocktail Recipes",
+    "auth": "No",
+    "https": "No",
+    "link": "http://www.thecocktaildb.com/"
   },
   {
     "name": "Yummly",
@@ -928,10 +968,18 @@ module.exports = [
     "link": "http://deckofcardsapi.com/"
   },
   {
+    "name": "Destiny The Game",
+    "category": "Games & Comics",
+    "description": "Bungie Platform API",
+    "auth": "apiKey",
+    "https": "Yes",
+    "link": "https://www.bungie.net/en/Clan/Post/39966/85087279/0/0"
+  },
+  {
     "name": "Eve Online",
     "category": "Games & Comics",
     "description": "Third-Party Developer Documentation",
-    "auth": "OAuth required for some parts",
+    "auth": "OAuth",
     "https": "Yes",
     "link": "https://eveonline-third-party-documentation.readthedocs.io/en/latest/"
   },
@@ -950,6 +998,14 @@ module.exports = [
     "auth": "apiKey",
     "https": "Yes",
     "link": "https://wiki.guildwars2.com/wiki/API:Main"
+  },
+  {
+    "name": "Jservice",
+    "category": "Games & Comics",
+    "description": "Jeopardy Question Database",
+    "auth": "No",
+    "https": "No",
+    "link": "http://jservice.io"
   },
   {
     "name": "Magic The Gathering",
@@ -984,12 +1040,28 @@ module.exports = [
     "link": "https://opentdb.com/api_config.php"
   },
   {
+    "name": "PandaScore",
+    "category": "Games & Comics",
+    "description": "E-sports games and results",
+    "auth": "apiKey",
+    "https": "Yes",
+    "link": "https://api.pandascore.co"
+  },
+  {
     "name": "Pokéapi",
     "category": "Games & Comics",
     "description": "Pokémon Information",
     "auth": "No",
     "https": "No",
     "link": "http://pokeapi.co"
+  },
+  {
+    "name": "Qriusity",
+    "category": "Games & Comics",
+    "description": "Quiz/Trivia Questions",
+    "auth": "No",
+    "https": "Yes",
+    "link": "https://qriusity.com/"
   },
   {
     "name": "Riot Games",
@@ -1029,7 +1101,7 @@ module.exports = [
     "description": "Create/customize digital maps based on Bing Maps data",
     "auth": "apiKey",
     "https": "Yes",
-    "link": "https://www.microsoft.com/maps/choose-your-bing-maps-API.aspx"
+    "link": "https://www.microsoft.com/maps/"
   },
   {
     "name": "Geocode.xyz",
@@ -1115,7 +1187,7 @@ module.exports = [
     "name": "One Map 2.0, Singapore",
     "category": "Geocoding",
     "description": "Singapore Land Authority REST API services for Singapore addresses",
-    "auth": "Yes",
+    "auth": "apiKey",
     "https": "Yes",
     "link": "https://docs.onemap.sg/"
   },
@@ -1150,6 +1222,14 @@ module.exports = [
     "auth": "No",
     "https": "Yes",
     "link": "https://postcodes.io"
+  },
+  {
+    "name": "REST Countries",
+    "category": "Geocoding",
+    "description": "Get information about countries via a RESTful API",
+    "auth": "No",
+    "https": "Yes",
+    "link": "https://restcountries.eu"
   },
   {
     "name": "Utah AGRC",
@@ -1219,7 +1299,7 @@ module.exports = [
     "name": "API.AI",
     "category": "Machine Learning",
     "description": "Natural Language Processing",
-    "auth": "apikey",
+    "auth": "apiKey",
     "https": "Yes",
     "link": "https://api.ai/"
   },
@@ -1235,15 +1315,23 @@ module.exports = [
     "name": "Cleverbot",
     "category": "Machine Learning",
     "description": "Web chat bot",
-    "auth": "apikey",
+    "auth": "apiKey",
     "https": "Yes",
     "link": "https://www.cleverbot.com/api/"
+  },
+  {
+    "name": "Keen IO",
+    "category": "Machine Learning",
+    "description": "Data Analytics",
+    "auth": "apiKey",
+    "https": "Yes",
+    "link": "https://keen.io/"
   },
   {
     "name": "Unplugg",
     "category": "Machine Learning",
     "description": "Forecasting API for timeseries data",
-    "auth": "apikey",
+    "auth": "apiKey",
     "https": "Yes",
     "link": "https://unplu.gg/test_api.html"
   },
@@ -1262,6 +1350,22 @@ module.exports = [
     "auth": "No",
     "https": "Yes",
     "link": "https://newton.now.sh/"
+  },
+  {
+    "name": "Numbers API",
+    "category": "Math",
+    "description": "Facts about numbers",
+    "auth": "No",
+    "https": "No",
+    "link": "http://numbersapi.com"
+  },
+  {
+    "name": "Bandsintown",
+    "category": "Music",
+    "description": "Music Events",
+    "auth": "No",
+    "https": "Yes",
+    "link": "https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.0"
   },
   {
     "name": "Deezer",
@@ -1363,7 +1467,7 @@ module.exports = [
     "name": "Spotify",
     "category": "Music",
     "description": "Music",
-    "auth": "OAuth required for some parts",
+    "auth": "OAuth",
     "https": "Yes",
     "link": "https://developer.spotify.com/web-api/"
   },
@@ -1379,15 +1483,15 @@ module.exports = [
     "name": "New York Times",
     "category": "News",
     "description": "Provides news",
-    "auth": "apikey",
+    "auth": "apiKey",
     "https": "Yes",
     "link": "https://developer.nytimes.com/"
   },
   {
     "name": "News API",
     "category": "News",
-    "description": "headlines currently published on a range of news sources and blogs",
-    "auth": "apikey",
+    "description": "Headlines currently published on a range of news sources and blogs",
+    "auth": "apiKey",
     "https": "Yes",
     "link": "https://newsapi.org/"
   },
@@ -1395,7 +1499,7 @@ module.exports = [
     "name": "The Guardian",
     "category": "News",
     "description": "Access all the content the Guardian creates, categorised by tags and section",
-    "auth": "apikey",
+    "auth": "apiKey",
     "https": "Yes",
     "link": "http://open-platform.theguardian.com/"
   },
@@ -1528,12 +1632,28 @@ module.exports = [
     "link": "https://unsplash.com/developers"
   },
   {
+    "name": "arcsecond.io",
+    "category": "Science",
+    "description": "Multiple astronomy data sources",
+    "auth": "No",
+    "https": "Yes",
+    "link": "https://api.arcsecond.io/"
+  },
+  {
     "name": "Fedger.io",
     "category": "Science",
     "description": "Query machine intelligence data",
     "auth": "No",
     "https": "Yes",
     "link": "https://dev.fedger.io/docs/"
+  },
+  {
+    "name": "Gene_info",
+    "category": "Science",
+    "description": "Human genome data w/ gene summaries",
+    "auth": "apiKey",
+    "https": "No",
+    "link": "http://www.geneinfo.life"
   },
   {
     "name": "inspirehep.net",
@@ -1637,7 +1757,7 @@ module.exports = [
     "description": "Get the social share count of a URL from every major social network",
     "auth": "No",
     "https": "Yes",
-    "link": "https://donreach.com/social-share-count"
+    "link": "https://donreach.com/social-share-count/"
   },
   {
     "name": "Facebook",
@@ -1694,6 +1814,14 @@ module.exports = [
     "auth": "OAuth",
     "https": "Yes",
     "link": "https://developer.linkedin.com/docs/rest-api"
+  },
+  {
+    "name": "Meetup.com",
+    "category": "Social",
+    "description": "Data about Meetups from Meetup.com",
+    "auth": "apiKey",
+    "https": "Yes",
+    "link": "https://www.meetup.com/meetup_api/"
   },
   {
     "name": "Telegram MTProto",
@@ -1776,6 +1904,14 @@ module.exports = [
     "link": "https://vk.com/dev/sites"
   },
   {
+    "name": "Cartola FC",
+    "category": "Sports & Fitness",
+    "description": "The Cartola FC API serves to check the partial points of your team.",
+    "auth": "No",
+    "https": "Yes",
+    "link": "https://github.com/wgenial/cartrolandofc"
+  },
+  {
     "name": "City Bikes",
     "category": "Sports & Fitness",
     "description": "City Bikes around the world",
@@ -1818,7 +1954,7 @@ module.exports = [
   {
     "name": "Cricket Live Scores",
     "category": "Sports & Fitness",
-    "description": "live-score",
+    "description": "Live cricket scores",
     "auth": "X-Mashape-Key",
     "https": "Yes",
     "link": "https://market.mashape.com/dev132/cricket-live-scores"
@@ -1864,6 +2000,22 @@ module.exports = [
     "link": "https://wger.de/en/software/api"
   },
   {
+    "name": "Postmon",
+    "category": "Tracking",
+    "description": "An API to query Brazilian ZIP codes and orders easily, quickly and free",
+    "auth": "No",
+    "https": "No",
+    "link": "http://postmon.com.br"
+  },
+  {
+    "name": "Sweden",
+    "category": "Tracking",
+    "description": "Provides information about parcels in transport",
+    "auth": "apiKey",
+    "https": "No",
+    "link": "https://developer.postnord.com/docs2"
+  },
+  {
     "name": "Amadeus Travel Innovation Sandbox",
     "category": "Transportation",
     "description": "Travel Search - Limited usage",
@@ -1891,7 +2043,7 @@ module.exports = [
     "name": "Indian Railways",
     "category": "Transportation",
     "description": "Indian Railways Information",
-    "auth": "token",
+    "auth": "apiKey",
     "https": "No",
     "link": "http://api.erail.in/"
   },
@@ -1954,7 +2106,7 @@ module.exports = [
   {
     "name": "Transport for Berlin, Germany",
     "category": "Transportation",
-    "description": "third-party VBB API",
+    "description": "Third-party VBB API",
     "auth": "No",
     "https": "Yes",
     "link": "https://github.com/derhuerst/vbb-rest/blob/master/docs/index.md"
@@ -1990,6 +2142,14 @@ module.exports = [
     "auth": "No",
     "https": "Yes",
     "link": "https://www.chaps.cz/eng/products/idos-internet"
+  },
+  {
+    "name": "Transport for Denver, US",
+    "category": "Transportation",
+    "description": "RTD",
+    "auth": "No",
+    "https": "No",
+    "link": "http://www.rtd-denver.com/gtfs-developer-guide.shtml"
   },
   {
     "name": "Transport for Finland",
@@ -2070,6 +2230,14 @@ module.exports = [
     "auth": "No",
     "https": "No",
     "link": "http://data.ratp.fr/api/v1/console/datasets/1.0/search/"
+  },
+  {
+    "name": "Transport for Paris, France",
+    "category": "Transportation",
+    "description": "Live schedules made simple",
+    "auth": "No",
+    "https": "No",
+    "link": "http://restratpws.azurewebsites.net/swagger/"
   },
   {
     "name": "Transport for Philadelphia, US",
@@ -2248,14 +2416,6 @@ module.exports = [
     "link": "http://netflixroulette.net/api/"
   },
   {
-    "name": "OMDB",
-    "category": "Video",
-    "description": "Open movie database",
-    "auth": "No",
-    "https": "Yes",
-    "link": "https://omdbapi.com/"
-  },
-  {
     "name": "Ron Swanson Quotes",
     "category": "Video",
     "description": "Television",
@@ -2323,7 +2483,7 @@ module.exports = [
     "name": "Wunderground",
     "category": "Weather",
     "description": "Weather",
-    "auth": "No",
+    "auth": "apiKey",
     "https": "Yes",
     "link": "https://www.wunderground.com/weather/api/"
   },
