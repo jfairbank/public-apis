@@ -22,7 +22,7 @@
   "scripts": {
     "build": "elm-app build",
     "build:validation": "elm make ./src/ValidateApis.elm --output ./scripts/ValidateApis.js",
-    "deploy": "npm run build && cp CNAME dist/ && surge -p dist/",
+    "deploy": "npm run build && cp CNAME build/ && surge -p build/",
     "dev": "elm-app start",
     "fetch:apis": "npm run build:validation && node ./scripts/fetchAPIs",
     "test": "elm-app test",
